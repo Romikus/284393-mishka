@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Роман Наумов](https://up.htmlacademy.ru/adaptive/9/user/284393).
-* Наставник: `Неизвестно`.
+* Наставник: [Олег Зубов](https://up.htmlacademy.ru/adaptive/9/user/42701).
 
 ---
 
