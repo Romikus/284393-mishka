@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="вязание на заказ, аксессуар для интерьер, детская игрушка, заказать">
+    <meta name="description" content="Магазин по продаже вязаных вещей ручной работы">
+    <title>Мишка - Вязание на заказ</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="navigation">
+        <a class="navigation__logo" href="index.html"><img src="logo.svg" width="86" height="35" alt="MISHKA"></a>
+        <button class="navigation__toggle" type="button">Открыть меню</button>
+        <ul class="navigation__main-menu">
+          <li class="navigation__main-menu-item"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="navigation__main-menu-item"><a>Вязание на заказ</a></li>
+          <li class="navigation__main-menu-item"><a href="#">Поиск по сайту</a></li>
+          <li class="navigation__main-menu-item"><a href="#">Корзина:пока пуста</a></li>
+      </nav>
+    </header>
+    <div class="page-main">
+      <h1 class="page-title">Вязание на заказ</h1>
+      <div class="page-main__content">
+        <p class="page-main__text-ifo">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <form class="page-main__order" action="#" name="product-order" method="post">
+          <div class="order__product-type">
+            <p><b>Тип</b></p>                  <!-- не будет ли лишним тег b, добавил для выделения текста -->
+            <input id="radio-1" type="radio" name="product-type" value="Аксессуар для интерьера" checked>
+            <label for="radio-1">Аксессуар для интерьера</label>
+            <input id="radio-2" type="radio" name="product-type" value="Детская игрушка">
+            <label for="radio-2">Детская игрушка</label>
+          </div>
+          <div class="order__product-color">
+            <p><b>Цвет</b></p>
+            <input id="checkbox-1" type="checkbox" name="product-color[]" value="Белый" checked>
+            <label for="checkbox-1">Белый</label>
+            <input id="checkbox-2" type="checkbox" name="product-color[]" value="Серый" checked>
+            <label for="checkbox-2">Серый</label>
+            <input id="checkbox-3" type="checkbox" name="product-color[]" value="Тиффани">
+            <label for="checkbox-3">«Тиффани»</label>
+            <input id="checkbox-4" type="checkbox" name="product-color[]" value="Черный">
+            <label for="checkbox-4">Черный</label>
+            <input id="checkbox-5" type="checkbox" name="product-color[]" value="Розовый">
+            <label for="checkbox-5">Розовый</label>
+            <input id="checkbox-6" type="checkbox" name="product-color[]" value="Оранжевый">
+            <label for="checkbox-6">Оранжевый</label>
+          </div>
+          <div class="order__user-data">
+            <p><b>ФИО</b></p>
+            <label for="user-name">Имя:</label>
+            <input id="user-name" type="text" name="user-name" placeholder="Введите ваше имя*" required>
+            <label for="user-surname">Фамилия:</label>
+            <input id="user-surname" type="text" name="user-surname" placeholder="Укажите фамилию*" required>
+            <label for="user-patronymic-name">Отчество:</label>
+            <input id="user-patronymic-name" type="text" name="user-patronymic-name" placeholder="Отчество, если желаете">
+          </div>
+          <div class="order__user-phone">
+            <p><b>Тел</b></p>
+            <label for="user-phone" class="visually-hidden">Телефон:</label>
+            <input id="user-phone" type="tel" name="user-phone" placeholder="+7 XXX XX XX*" pattern="^[ 0-9]+$" required>
+          </div>
+          <div class="order__user-email">
+            <p><b>E-mail</b></p>
+            <label for="user-email" class="visually-hidden">E-mail:</label>
+            <input id="user-email" type="email" name="user-email" placeholder="Ваш Email*" required>
+          </div>
+          <div class="order__user-note">
+            <p><b>Доп</b></p>
+            <textarea id="user-text" name="user-text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
+          <p class="order__note">*Поля обязательны для заполнения</p>
+          <button class="order__button" type="submit">Отправить заказ</button>
+        </form>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <div class="page-footer__content">
+        <div class="page-footer__social">
+          <span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
+          <a class="social-link social-link--instagram" href="http://instagram.com/">instagram</a>
+          <a class="social-link social-link--facebook" href="http://facebook.com/">facebook</a>
+          <a class="social-link social-link--twitter" href="http://twitter.com/">twitter</a>
+        </div>
+        <p class="page-footer__copyright">
+          Разработано
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru"><img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy"></a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
