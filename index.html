@@ -8,7 +8,6 @@
   </head>
   <body>
     <header class="page-header">
-      <h1 class="visually-hidden">Магазин «MISHKA» - вязаные вещи ручной работы</h1>
       <nav class="navigation">
         <a class="navigation__logo"><img src="logo.svg" width="86" height="35" alt="MISHKA"></a>
         <button class="navigation__toggle" type="button">Открыть меню</button>
@@ -20,7 +19,7 @@
       </nav>
     </header>
     <section class="products">
-      <h2 class="products__title">Милые штуки ручной работы для дома</h2>
+      <h1 class="products__title">Милые штуки ручной работы для дома</h1>
       <a href="#"><h3>Предметы интерьера</h3></a>
       <a href="#"><h3>Детские игрушки</h3></a>
     </section>
@@ -46,32 +45,19 @@
         <img src="img/top_product.jpg" width="260" height="315" alt="Вязаные корзинки">
         <div class="top-product__card">
           <span class="top-product__card-price">Цена 990 руб.</span>
-          <a class="top-product__card-button" href="#">Заказать</a>
+          <a class="top-product__card-button btn" href="#">Заказать</a>
         </div>
       </div>
-      <img src="img/wave.svg" width="100%" height="7">    <!-- заменить на svg-объект -->
     </section>
     <section class="shop-info">
       <h2 class="shop-info__title">Коротко о нас:</h2>
       <ul class="shop-info__subtitles">
-        <li class="shop-info__subtitle">
-          <h3><a href="#">Экологически чистые материалы</a></h3>
-        </li>
-        <li class="shop-info__subtitle">
-          <h3><a href="#">Скандинавский стиль по российской цене</a></h3>
-        </li>
-        <li class="shop-info__subtitle">
-          <h3><a href="#">Увеличивает лайки на фотографиях</a></h3>
-        </li>
-        <li class="shop-info__subtitle">
-          <h3><a href="#">Связано вручную с любовью и умилением</a></h3>
-        </li>
-        <li class="shop-info__subtitle">
-          <h3><a href="#">Поддержка отечественного производителя</a></h3>
-        </li>
-        <li class="shop-info__subtitle">
-          <h3><a href="#">Поставляется в подарочной упаковке</a></h3>
-        </li>
+        <li class="shop-info__subtitle shop-info__subtitle--material">Экологически чистые материалы</li>
+        <li class="shop-info__subtitle shop-info__subtitle--style">Скандинавский стиль по российской цене</li>
+        <li class="shop-info__subtitle shop-info__subtitle--like">Увеличивает лайки на фотографиях</li>
+        <li class="shop-info__subtitle shop-info__subtitle--work">Связано вручную с любовью и умилением</li>
+        <li class="shop-info__subtitle shop-info__subtitle--producer">Поддержка отечественного производителя</li>
+        <li class="shop-info__subtitle shop-info__subtitle--packing">Поставляется в подарочной упаковке</li>
       </ul>
     </section>
     <section class="reviews">
@@ -89,34 +75,25 @@
           <button class="reviews__prev" type="button">Предыдущий отзыв</button>
           <button class="reviews__next" type="button">Следующий отзыв</button>
         </div>
-        <a class="reviews__add-review" href="#">Написать</a>
+        <a class="reviews__add-review btn" href="#">Написать</a>
       </div>
-      <img src="img/wave.svg" width="100%" height="7">    <!-- заменить на svg-объект -->
     </section>
     <section class="contacts">
       <h2 class="contacts__title">Контакты</h2>
       <div class="contacts__items">
         <div class="contacts__item">
-          <div class="contacts__item-email">
-            <b>e-mail:</b>
-          </div>
-          <div class="contacts__item-email-value">
-            <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-          </div>
+          <b class="contacts__item-email">e-mail:</b>
+          <a class="contacts__item-email-value" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
         </div>
         <div class="contacts__item">
-          <div class="contacts__item-address">
-            <b>адрес:</b>
-          </div>
-          <div class="contacts__item-address-value">
-            <p>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
-          </div>
+          <b class="contacts__item-address">адрес:</b>
+          <p class="contacts__item-address-value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
         </div>
       </div>
       <div class="contacts__map">
         <img src="img/map.jpg" width="320" height="457" alt="Карта">
       </div>
-      <a class="contacts__feedback" href="">Напишите нам</a>
+      <a class="contacts__feedback btn" href="">Напишите нам</a>
     </section>
     <footer class="page-footer">
       <div class="page-footer__content">
