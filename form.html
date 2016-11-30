@@ -23,50 +23,66 @@
       <div class="page-main__content">
         <p class="page-main__text-ifo">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <form class="page-main__order order" action="#" name="product-order" method="post">
-          <fieldset class="order__product-type radio">
-            <legend class="order__product-type-title radio__title">Тип</legend>
-            <input id="radio-1" class="radio__input" type="radio" name="product-type" value="Аксессуар для интерьера" checked>
-            <label for="radio-1" class="radio__label">Аксессуар для интерьера</label>
-            <input id="radio-2" class="radio__input" type="radio" name="product-type" value="Детская игрушка">
-            <label for="radio-2" class="radio__label">Детская игрушка</label>
+          <fieldset class="order__product-type">
+            <legend class="order__product-type-title">Тип</legend>
+            <div class="radio">
+              <input id="radio-1" class="radio__input" type="radio" name="product-type" value="Аксессуар для интерьера" checked>
+              <label for="radio-1" class="radio__label">Аксессуар для интерьера</label>
+            </div>
+            <div class="radio">
+              <input id="radio-2" class="radio__input" type="radio" name="product-type" value="Детская игрушка">
+              <label for="radio-2" class="radio__label">Детская игрушка</label>
+            </div>
           </fieldset>
-          <fieldset class="order__product-color checkbox">
-            <legend class="order__product-color-title checkbox__title">Цвет</legend>
-            <input id="checkbox-1" class="checkbox__input" type="checkbox" name="product-color[]" value="Белый" checked>
-            <label for="checkbox-1" class="checkbox__label">Белый</label>
-            <input id="checkbox-2" class="checkbox__input" type="checkbox" name="product-color[]" value="Серый" checked>
-            <label for="checkbox-2" class="checkbox__label">Серый</label>
-            <input id="checkbox-3" class="checkbox__input" type="checkbox" name="product-color[]" value="Тиффани">
-            <label for="checkbox-3" class="checkbox__label">«Тиффани»</label>
-            <input id="checkbox-4" class="checkbox__input" type="checkbox" name="product-color[]" value="Черный">
-            <label for="checkbox-4" class="checkbox__label">Черный</label>
-            <input id="checkbox-5" class="checkbox__input" type="checkbox" name="product-color[]" value="Розовый">
-            <label for="checkbox-5" class="checkbox__label">Розовый</label>
-            <input id="checkbox-6" class="checkbox__input" type="checkbox" name="product-color[]" value="Оранжевый">
-            <label for="checkbox-6" class="checkbox__label">Оранжевый</label>
+          <fieldset class="order__product-color">
+            <legend class="order__product-color-title">Цвет</legend>
+            <div class="checkbox">
+              <input id="checkbox-1" class="checkbox__input" type="checkbox" name="product-color[]" value="Белый" checked>
+              <label for="checkbox-1" class="checkbox__label">Белый</label>
+            </div>
+            <div class="checkbox">
+              <input id="checkbox-2" class="checkbox__input" type="checkbox" name="product-color[]" value="Серый" checked>
+              <label for="checkbox-2" class="checkbox__label">Серый</label>
+            </div>
+            <div class="checkbox">
+              <input id="checkbox-3" class="checkbox__input" type="checkbox" name="product-color[]" value="Тиффани">
+              <label for="checkbox-3" class="checkbox__label">«Тиффани»</label>
+            </div>
+            <div class="checkbox">
+              <input id="checkbox-4" class="checkbox__input" type="checkbox" name="product-color[]" value="Черный">
+              <label for="checkbox-4" class="checkbox__label">Черный</label>
+            </div>
+            <div class="checkbox">
+              <input id="checkbox-5" class="checkbox__input" type="checkbox" name="product-color[]" value="Розовый">
+              <label for="checkbox-5" class="checkbox__label">Розовый</label>
+            </div>
+            <div class="checkbox">
+              <input id="checkbox-6" class="checkbox__input" type="checkbox" name="product-color[]" value="Оранжевый">
+              <label for="checkbox-6" class="checkbox__label">Оранжевый</label>
+            </div>
           </fieldset>
           <fieldset class="order__user-data user-data">
             <legend class="order__user-data-title user-data__title">ФИО</legend>
             <label for="user-name" class="user-data__label">Имя:</label>
-            <input id="user-name" class="user-data__input" type="text" name="user-name" placeholder="Введите ваше имя*" required>
+            <input id="user-name" class="user-data__input input-field" type="text" name="user-name" placeholder="Введите ваше имя*" required>
             <label for="user-surname" class="user-data__label">Фамилия:</label>
-            <input id="user-surname" class="user-data__input" type="text" name="user-surname" placeholder="Укажите фамилию*" required>
+            <input id="user-surname" class="user-data__input input-field" type="text" name="user-surname" placeholder="Укажите фамилию*" required>
             <label for="user-patronymic-name" class="user-data__label">Отчество:</label>
-            <input id="user-patronymic-name" class="user-data__input" type="text" name="user-patronymic-name" placeholder="Отчество, если желаете">
+            <input id="user-patronymic-name" class="user-data__input input-field" type="text" name="user-patronymic-name" placeholder="Отчество, если желаете">
           </fieldset>
           <fieldset class="order__user-phone user-phone">
             <legend class="order__user-phone-title user-phone__title">Тел</legend>
-            <label for="user-phone" class="user-phone__label">Телефон:</label>
+            <label for="user-phone" class="user-phone__label input-field--phone">Телефон:</label>
             <input id="user-phone" class="user-phone__input" type="tel" name="user-phone" placeholder="+7 XXX XX XX*" pattern="^[ 0-9]+$" required>
           </fieldset>
           <fieldset class="order__user-email user-email">
             <legend class="order__user-email-title user-email__title">E-mail</legend>
             <label for="user-email" class="user-email__label">E-mail:</label>
-            <input id="user-email" class="user-email__input" type="email" name="user-email" placeholder="Ваш Email*" required>
+            <input id="user-email" class="user-email__input input-field input-field--mail" type="email" name="user-email" placeholder="Ваш Email*" required>
           </fieldset>
           <fieldset class="order__user-note user-note">
             <legend class="order__user-note-title user-note__title">Доп</legend>
-            <textarea id="user-text" class="user-note__textarea" name="user-text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <textarea id="user-text" class="user-note__textarea textarea--field" name="user-text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
           <p class="order__note">*Поля обязательны для заполнения</p>
           <button class="order__button btn" type="submit">Отправить заказ</button>
