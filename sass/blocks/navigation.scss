@@ -1,0 +1,24 @@
+.navigation {
+  padding: 0 30px;
+
+  color: #000;
+  background-color: $bg-color;
+  outline: 2px solid lightblue;
+}
+
+.navigation__main-menu {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.navigation__main-menu-item {
+  a {
+    font-size: 17px;
+    line-height: 24px;
+
+    color: $menu-font-color;
+    text-decoration: none;
+  }
+}

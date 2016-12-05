@@ -1,0 +1,25 @@
+.reviews {
+  outline: 2px solid lightblue;
+}
+
+.reviews__content {
+  padding: 0 30px;
+}
+
+.reviews__title {
+  margin: 0;
+  margin-bottom: 23px;
+
+  font-size: 25px;
+  @include title-font;
+}
+
+.reviews__item {
+  margin: 0;
+  margin-bottom: 28px;
+
+  p {
+    font-size: 15px;
+    line-height: 30px;
+  }
+}

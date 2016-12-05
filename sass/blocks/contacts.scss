@@ -1,0 +1,22 @@
+.contacts {
+  outline: 2px solid lightgreen;
+}
+
+.contacts__title {
+  padding: 0 30px;
+
+  font-size: 18px;
+  @include title-font;
+}
+
+.contacts__items {
+  padding: 0 30px;
+
+  font-size: 15px;
+  line-height: 32px;
+}
+
+.contacts__item-email,
+.contacts__item-address {
+  font-weight: normal;
+}

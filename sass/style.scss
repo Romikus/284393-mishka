@@ -1,0 +1,30 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+@import "global/scaffolding.scss";
+
+@import "blocks/btn.scss";
+@import "blocks/catalog-item.scss";
+@import "blocks/checkbox.scss";
+@import "blocks/contacts.scss";
+@import "blocks/input-field.scss";
+@import "blocks/modal.scss";
+@import "blocks/navigation.scss";
+@import "blocks/order.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-main.scss";
+@import "blocks/product-color.scss";
+@import "blocks/product-type.scss";
+@import "blocks/products.scss";
+@import "blocks/radio.scss";
+@import "blocks/reviews.scss";
+@import "blocks/shop-info.scss";
+@import "blocks/social-link.scss";
+@import "blocks/textarea-field.scss";
+@import "blocks/top-product.scss";
+@import "blocks/user-data.scss";
+@import "blocks/user-email.scss";
+@import "blocks/user-note.scss";
+@import "blocks/user-phone.scss";
+@import "blocks/visually-hidden.scss";

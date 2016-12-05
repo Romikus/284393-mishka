@@ -1,0 +1,35 @@
+.modal {
+  width: 260px;
+  padding: 35px 30px 46px 30px;
+
+  outline: 2px solid lightgreen;
+}
+
+.modal__header {
+  display: block;
+  padding: 0 50px;
+
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $title-font-color;
+}
+
+.modal__text {
+  display: block;
+
+  line-height: 30px;
+  text-align: center;
+}
+
+.modal__add-basket {
+  display: block;
+
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}

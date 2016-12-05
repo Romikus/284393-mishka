@@ -1,0 +1,49 @@
+.shop-info {
+  margin-bottom: 55px;
+
+  outline: 2px solid lightgreen;
+}
+
+.shop-info__content {
+  padding: 0 30px;
+}
+
+.shop-info__title {
+  margin: 0;
+
+  font-size: 25px;
+  @include title-font;
+}
+
+.shop-info__subtitles {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.shop-info__subtitle {
+  padding-top: 52px;
+
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: bold;
+  color: $title-font-color;
+}
+
+.reviews__author-name {
+  margin-top: 27px;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  font-style: normal;
+  color: #000;
+}
+
+.reviews__author-contact {
+  line-height: 30px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #444;
+}

@@ -1,0 +1,28 @@
+.order {
+  outline: 2px solid lightgreen;
+}
+
+.order__item {
+  padding: 0;
+  margin-bottom: 34px;
+}
+
+.order__item:last-of-type {
+  margin-bottom: 0;
+}
+
+.order__title {
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #63d1bb;
+}
+
+.order__note {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.order__button {
+  width: 100%;
+}
