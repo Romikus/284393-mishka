@@ -1,7 +1,7 @@
 @import "variables.scss";
 @import "mixins.scss";
 
-//@import "global/fonts.scss";
+@import "global/fonts.scss";
 @import "global/scaffolding.scss";
 
 @import "blocks/btn.scss";
@@ -9,6 +9,7 @@
 @import "blocks/checkbox.scss";
 @import "blocks/contacts.scss";
 @import "blocks/input-field.scss";
+@import "blocks/label-field.scss";
 @import "blocks/modal.scss";
 @import "blocks/navigation.scss";
 @import "blocks/order.scss";
