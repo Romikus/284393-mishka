@@ -5,11 +5,12 @@
     <meta name="keywords" content="вязание на заказ, аксессуар для интерьер, детская игрушка, заказать">
     <meta name="description" content="Магазин по продаже вязаных вещей ручной работы">
     <title>Мишка - Вязание на заказ</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <nav class="navigation">
-        <a class="navigation__logo" href="index.html"><img src="logo.svg" width="86" height="35" alt="MISHKA"></a>
+        <a class="navigation__logo" href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA"></a>
         <button class="navigation__toggle" type="button">Открыть меню</button>
         <ul class="navigation__main-menu">
           <li class="navigation__main-menu-item"><a href="catalog.html">Каталог товаров</a></li>
@@ -22,7 +23,7 @@
     <div class="page-main">
       <h1 class="page-main__title">Вязание на заказ</h1>
       <div class="page-main__content">
-        <p class="page-main__text-ifo">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <p class="page-main__text-info">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <form class="page-main__order order" action="#" name="product-order" method="post">
           <fieldset class="order__item product-type">
             <legend class="order__title product-type__title">Тип</legend>
@@ -64,21 +65,21 @@
           </fieldset>
           <fieldset class="order__item user-data">
             <legend class="order__title user-data__title">ФИО</legend>
-            <label for="user-name" class="user-data__label">Имя:</label>
+            <label for="user-name" class="user-data__label label-field">Имя:</label>
             <input id="user-name" class="user-data__input input-field" type="text" name="user-name" placeholder="Введите ваше имя*" required>
-            <label for="user-surname" class="user-data__label">Фамилия:</label>
+            <label for="user-surname" class="user-data__label label-field">Фамилия:</label>
             <input id="user-surname" class="user-data__input input-field" type="text" name="user-surname" placeholder="Укажите фамилию*" required>
-            <label for="user-patronymic-name" class="user-data__label">Отчество:</label>
+            <label for="user-patronymic-name" class="user-data__label label-field">Отчество:</label>
             <input id="user-patronymic-name" class="user-data__input input-field" type="text" name="user-patronymic-name" placeholder="Отчество, если желаете">
           </fieldset>
           <fieldset class="order__item user-phone">
             <legend class="order__title user-phone__title">Тел</legend>
-            <label for="user-phone" class="user-phone__label">Телефон:</label>
+            <label for="user-phone" class="user-phone__label label-field label-field--hidden">Телефон:</label>
             <input id="user-phone" class="user-phone__input input-field input-field--phone" type="tel" name="user-phone" placeholder="+7 XXX XX XX*" pattern="^[ 0-9]+$" required>
           </fieldset>
           <fieldset class="order__item user-email">
             <legend class="order__title user-email__title">E-mail</legend>
-            <label for="user-email" class="user-email__label">E-mail:</label>
+            <label for="user-email" class="user-email__label label-field label-field--hidden">E-mail:</label>
             <input id="user-email" class="user-email__input input-field input-field--mail" type="email" name="user-email" placeholder="Ваш Email*" required>
           </fieldset>
           <fieldset class="order__item user-note">
@@ -100,7 +101,7 @@
         </div>
         <p class="page-footer__copyright">
           Разработано
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru"><img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy"></a>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy"></a>
         </p>
       </div>
     </footer>

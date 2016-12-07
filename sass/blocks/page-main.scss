@@ -1,0 +1,44 @@
+.page-main {
+  outline: 2px solid lightgreen;
+}
+
+.page-main__title {
+  margin: 0;
+  padding: 73px 0;
+
+  font-size: 27px;
+  text-align: center;
+  @include title-font;
+
+  background-color: #f1f1f1;
+}
+
+.page-main__content {
+  padding: 0 30px;
+}
+
+.page-main__production {
+  outline: 2px solid yellow;
+
+  p {
+    font-size: 13px;
+    line-height: 24px;
+  }
+}
+
+.page-main__production-title {
+  padding: 0 15px 0 90px;
+
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.page-main__production-info {
+  padding: 0 33px;
+}
+
+.page-main__text-info {
+  font-size: 13px;
+}
