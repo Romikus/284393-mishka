@@ -23,7 +23,7 @@
   font-weight: bold;
   color: #000;
 
-   &::before {
+  &::before {
     content: "";
     position: absolute;
     top: 50%;
