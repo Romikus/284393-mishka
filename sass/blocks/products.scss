@@ -1,41 +1,116 @@
 .products {
+  min-width: 320px;
   margin-bottom: 30px;
 
   color: #000;
-  background: #f9f9f9 url("../img/hero-mobile@1x.jpg") no-repeat 50% 0;
+  background: #f9f9f9 url("../img/hero-mobile@1x.jpg") no-repeat 50% -18px;
   outline: 2px solid lightgreen;
 }
 
 .products__title {
-  margin: 0;
-  padding: 73px 30px 120px 30px;
+  width: 240px;
+  margin: 0 auto;
+  padding: 73px 0 120px 0;
 
-  font-size: 27px;
   text-align: center;
-  @include title-font;
+  @include title-font(27px, 30px);
 }
 
 .products__item {
+  position: relative;
+
   display: block;
 
   text-decoration: none;
 
-  &--top {
+  &--interior {
     background-color: #63d1bb;
   }
 
-  &--bottom {
+  &--toys {
     background-color: #56c3b2;
   }
 }
 
 .products__item-title {
+  width: 130px;
   margin: 0;
   margin-left: 30px;
-  padding: 26px 0 28px 0;
+  padding: 27px 0 28px 0;
 
   font-size: 19px;
   line-height: 24px;
   font-weight: bold;
   color: #fff;
+}
+
+.products__icon {
+  position: absolute;
+  top: 50%;
+
+  fill: rgba(20,144,128,0.5);
+  transform: translateY(-50%);
+
+  &--interior {
+    right: 36px;
+
+    width: 41px;
+    height: 62px;
+  }
+
+  &--toys {
+    right: 26px;
+
+    width: 61px;
+    height: 61px;
+  }
+}
+
+/* --------------- tablet ------------------ */
+@media #{$tablet-widths} {
+  .products {
+    background: #f9f9f9 url("../img/hero-tablet@1x.jpg") no-repeat 50% 0;
+    margin-top: -62px;
+    margin-bottom: 50px;
+  }
+
+  .products__title {
+    width: auto;
+    padding: 157px 50px 368px 50px;
+
+    @include title-font(43px, 50px);
+  }
+
+  .products__items {
+    padding: 0 50px;
+    @include clearfix();
+  }
+
+  .products__item {
+    float: left;
+    width: 50%;
+  }
+
+  .products__icon {
+    &--toys {
+      right: 33px;
+    }
+  }
+}
+
+/* --------------- desktop ------------------ */
+@media #{$desktop-widths} {
+  .products {
+    background: #f9f9f9 url("../img/hero-desktop@1x.jpg") no-repeat 50% 0;
+    //margin-top: -62px;
+    margin-bottom: 72px;
+  }
+
+  .products__title {
+    width: auto;
+    padding: 160px 50px 352px 50px;
+
+    @include title-font(53px, 57px);
+  }
+
 }

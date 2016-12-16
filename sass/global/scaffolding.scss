@@ -9,3 +9,8 @@ body {
   color: $body-font-color;
   background-color: $bg-color;
 }
+
+input, textarea {
+  font-weight: normal;
+  font-family: "Open Sans", "Arial", sans-serif;
+}
