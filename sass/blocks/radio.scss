@@ -1,10 +1,60 @@
 .radio {
   outline: 2px solid yellow;
+
+  &:last-of-type .radio__label {
+    margin-bottom: 0;
+  }
+}
+
+.radio__input {
+  display: none;
 }
 
 .radio__label {
+  position: relative;
+
+  display: block;
+  margin-top: 17px;
+  margin-bottom: 20px;
+  padding: 11px 15px 11px 63px;
+
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
   color: #000;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 36px;
+    height: 36px;
+
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #444;
+
+    transform: translateY(-50%);
+  }
+}
+
+/* --------------- tablet ------------------ */
+@media #{$tablet-widths} {
+  .radio__label {
+    margin: 0;
+    //margin-bottom: 24px;
+    padding: 29px 15px 28px 81px;
+
+    font-size: 19px;
+    line-height: 19px;
+    font-weight: bold;
+    color: #000;
+
+    &::before {
+      width: 48px;
+      height: 48px;
+    }
+  }
 }

@@ -1,0 +1,21 @@
+.textarea-field {
+  display: block;
+  padding: 16px;
+  box-sizing: border-box;
+
+  font-size: 17px;
+  line-height: 18px;
+  color: rgba(68,68,68,0.3);
+
+  border: 2px solid #444;
+  outline: none;
+  resize: none;
+}
+
+/* --------------- tablet ------------------ */
+@media #{$tablet-widths} {
+  padding: 16px;
+
+  font-size: 19px;
+  line-height: 21px;
+}

@@ -4,11 +4,11 @@
 
 .page-main__title {
   margin: 0;
+  margin-bottom: 30px;
   padding: 73px 0;
 
-  font-size: 27px;
   text-align: center;
-  @include title-font;
+  @include title-font(27px, 30px);
 
   background-color: #f1f1f1;
 }
@@ -17,28 +17,250 @@
   padding: 0 30px;
 }
 
+.page-main__catalog {
+  width: 260px;
+  margin: 0 auto;
+}
+
 .page-main__production {
-  outline: 2px solid yellow;
+  width: 260px;
+  margin: 0 auto;
+  margin-bottom: 58px;
+
+  //border: 3px solid black;
+
+  outline: 2px solid red;
 
   p {
+    margin: 0;
+    margin-bottom: 14px;
+
     font-size: 13px;
     line-height: 24px;
   }
 }
 
 .page-main__production-title {
-  padding: 0 15px 0 90px;
+  margin: 0;
+  padding: 24px 15px 23px 90px;
 
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
   color: #000;
+
+  border: 1px solid #ececec;
+  border-bottom: 0;
+}
+
+.page-main__production-video {
+  position: relative;
+
+  width: 260px;
+  height: 150px;
+
+  video {
+    width: 260px;
+    height: 150px;
+
+    vertical-align: top;
+  }
+}
+
+.page-main__video-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 102px;
+  height: 78px;
+
+  font-size: 0;
+
+  background-color: #62d1ba;
+  border: 0;
+  cursor: pointer;
+
+  transform: translate(-50%, -50%);
 }
 
 .page-main__production-info {
-  padding: 0 33px;
+  padding: 30px 33px 32px 33px;
+
+  border: 1px solid #ececec;
+  border-top: 0;
+}
+
+.page-main__production-order {
+  margin-top: 25px;
 }
 
 .page-main__text-info {
   font-size: 13px;
+}
+
+.page-main__order {
+  margin-top: 26px;
+  margin-bottom: 55px;
+}
+
+/* --------------- tablet ------------------ */
+@media #{$tablet-widths} {
+  .page-main__title {
+    margin-top: -62px;
+    //margin-bottom: 80px;
+    padding: 87px 0;
+
+    @include title-font(43px, 50px);
+  }
+
+  .page-main__content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  .page-main__catalog {
+    width: auto;
+    margin-top: 80px;
+    margin-bottom: 54px;
+  }
+
+  .page-main__production {
+    position: relative;
+
+    width: 668px;
+    margin-bottom: 63px;
+
+    p {
+      margin-bottom: 16px;
+
+      font-size: 15px;
+      line-height: 30px;
+    }
+  }
+
+  .page-main__production-title {
+    position: absolute;
+    top: 456px;
+    z-index: 2;
+
+    width: 540px;
+    padding: 40px 20px 31px 108px;
+
+    font-size: 20px;
+
+    border: 0;
+  }
+
+  .page-main__production-video {
+    width: 668px;
+    height: 455px;
+
+    background-color: gray;   // для отладки
+
+    video {
+      width: 668px;
+      height: 455px;
+    }
+  }
+
+  .page-main__production-info {
+    padding: 96px 41px 45px 41px;
+
+    border: 1px solid #ececec;
+  }
+
+  .page-main__production-order {
+    margin-top: 33px;
+  }
+
+  .page-main__text-info {
+    margin-top: 73px;
+    margin-bottom: 6px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .page-main__order {
+    margin-top: 6px;
+    margin-bottom: 50px;
+  }
+}
+
+/* --------------- desktop ------------------ */
+@media #{$desktop-widths} {
+  .page-main__title {
+    //margin-bottom: 128px;
+    padding: 99px 0;
+
+    @include title-font(53px, 57px);
+  }
+
+  .page-main__content {
+    max-width: none;
+  }
+
+  .page-main__catalog {
+    width: 1050px;
+    margin: 0 auto;
+    margin-top: 128px;
+
+    @include clearfix();
+  }
+
+  .page-main__production {
+    width: 1050px;
+    margin-bottom: 105px;
+
+    outline: 1px solid #ececec;
+    outline-offset: -1px;
+
+    @include clearfix();
+
+    p {
+      margin-bottom: 16px;
+    }
+  }
+
+  .page-main__production-title {
+    position: static;
+    float: right;
+
+    width: 238px;
+    padding: 98px 50px 33px 80px;
+
+    border: 0;
+  }
+
+  .page-main__production-video {
+    float: left;
+    z-index: 2;
+
+    width: 682px;
+    height: 455px;
+
+    video {
+      width: 682px;
+      height: 455px;
+    }
+  }
+
+  .page-main__production-info {
+    float: right;
+    width: 238px;
+    padding: 0 50px 0 80px;
+
+    border: 0;
+  }
+
+  .page-main__production-order {
+    margin-top: 44px;
+  }
+
+  .page-main__text-info {
+    padding: 0 175px;
+  }
+
 }

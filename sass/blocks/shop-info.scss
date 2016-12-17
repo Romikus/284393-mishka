@@ -10,9 +10,9 @@
 
 .shop-info__title {
   margin: 0;
+  margin-bottom: 28px;
 
-  font-size: 25px;
-  @include title-font;
+  @include title-font(25px, 30px);
 }
 
 .shop-info__subtitles {
@@ -23,27 +23,129 @@
 }
 
 .shop-info__subtitle {
+  position: relative;
+
+  margin-bottom: 30px;
   padding-top: 52px;
 
   font-size: 17px;
   line-height: 1.2;
   font-weight: bold;
   color: $title-font-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 30px;
+    height: 10px;
+    background: red;
+  }
+
+  &--material::before {
+    width: 33px;
+    height: 38px;
+
+    background: transparent url("../img/icon-feature-1.svg") no-repeat;
+  }
+
+  &--style {
+    padding-right: 22%;
+  }
+
+  &--style::before {
+    width: 47px;
+    height: 27px;
+
+    background: transparent url("../img/icon-feature-3.svg") no-repeat;
+  }
+
+  &--like {
+    padding-right: 28%;
+  }
+
+  &--like::before {
+    width: 34px;
+    height: 28px;
+
+    background: transparent url("../img/icon-feature-5.svg") no-repeat;
+  }
+
+  &--work {
+    padding-right: 18%;
+  }
+
+  &--work::before {
+    width: 35px;
+    height: 34px;
+
+    background: transparent url("../img/icon-feature-2.svg") no-repeat;
+  }
+
+  &--producer::before {
+    width: 55px;
+    height: 23px;
+
+    background: transparent url("../img/icon-feature-4.svg") no-repeat;
+  }
+
+  &--packing {
+    padding-right: 22%;
+  }
+
+  &--packing::before {
+    width: 33px;
+    height: 32px;
+
+    background: transparent url("../img/icon-feature-6.svg") no-repeat;
+  }
 }
 
-.reviews__author-name {
-  margin-top: 27px;
+/* --------------- tablet ------------------ */
+@media #{$tablet-widths} {
+  .shop-info {
+    margin-bottom: 50px;
+  }
 
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: bold;
-  font-style: normal;
-  color: #000;
+  .shop-info__content {
+    padding: 0 50px;
+  }
+
+  .shop-info__title {
+    margin-bottom: 45px;
+
+    @include title-font(43px, 50px);
+  }
+
+  .shop-info__subtitles {
+    column-count: 2;
+    column-gap: 0;
+  }
+
+  .shop-info__subtitle {
+    font-size: 20px;
+
+    &--material {
+      padding-right: 20%;
+    }
+  }
 }
 
-.reviews__author-contact {
-  line-height: 30px;
-  font-weight: normal;
-  text-decoration: none;
-  color: #444;
+/* --------------- desktop ------------------ */
+@media #{$desktop-widths} {
+  .shop-info {
+    margin-bottom: 55px;
+  }
+
+  .shop-info__content {
+    padding: 0 225px;
+  }
+
+  .shop-info__title {
+    margin-bottom: 42px;
+
+    @include title-font(53px, 57px);
+  }
 }

@@ -1,5 +1,14 @@
-@mixin title-font() {
-  line-height: 30px;
+@mixin title-font($title-font-size, $title-font-height) {
+  font-size: $title-font-size;
+  line-height: $title-font-height;
   font-weight: bold;
   color: $title-font-color;
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }

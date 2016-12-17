@@ -4,8 +4,27 @@
   outline: 2px solid yellow;
 }
 
+.catalog-item__photo {
+  cursor: pointer;
+
+  img {
+    width: 260px;
+    height: 195px;
+
+    vertical-align: top;
+  }
+}
+
+.catalog-item__description {
+  padding: 0 28px;
+  padding-top: 28px;
+
+  border: 1px solid #ededed;
+}
+
 .catalog-item__title {
   margin: 0;
+  margin-bottom: 5px;
 
   a {
     font-size: 17px;
@@ -13,11 +32,9 @@
     font-weight: bold;
     text-decoration: none;
     color: #000;
-  }
-}
 
-.catalog-item__description {
-  padding: 0 28px;
+    cursor: pointer;
+  }
 }
 
 .catalog-item__options {
@@ -25,6 +42,122 @@
   line-height: 30px;
 }
 
+.catalog-item__order {
+  padding: 24px 0;
+  margin-top: 17px;
+
+  border-top: 1px solid #ececec;
+}
+
 .catalog-item__price {
   color: #000;
+}
+
+.catalog-item__basket {
+  float: right;
+  width: 21px;
+  height: 24px;
+
+  font-size: 0;
+
+  background: transparent url("../img/icon-cart.svg") no-repeat;
+  cursor: pointer;
+}
+
+/* --------------- tablet ------------------ */
+@media #{$tablet-widths} and (max-width: 1149px) {
+  .catalog-item {
+    margin-bottom: 54px;
+  }
+
+  .catalog-item__photo {
+    float: left;
+    width: 334px;
+    height: 334px;
+
+    overflow: hidden;
+
+    img {
+      width: 334px;
+      height: 334px;
+    }
+  }
+
+  .catalog-item__description {
+    position: relative;
+
+    height: 305px;
+    margin-left: 334px;
+
+    padding: 0 28px;
+    padding-top: 27px;
+  }
+
+  .catalog-item__title {
+    //margin-bottom: 5px;
+    padding-right: 45px;
+
+    a {
+      font-size: 20px;
+    }
+  }
+
+  .catalog-item__options {
+    font-size: 17px;
+  }
+
+  .catalog-item__order {
+    position: absolute;
+    bottom: 0;
+
+    width: calc(100% - 56px);
+
+    font-size: 17px;
+  }
+}
+
+/* --------------- desktop ------------------ */
+@media #{$desktop-widths} {
+  .catalog-item {
+    float: left;
+    width: 316px;
+    margin-right: 51px;
+    margin-bottom: 57px;
+  }
+
+  .catalog-item:nth-of-type(3) {
+    margin-right: 0;
+  }
+
+  .catalog-item__photo img {
+    width: 316px;
+    height: 462px;
+  }
+
+  .catalog-item__description {
+    position: relative;
+
+    height: 167px;
+  }
+
+  .catalog-item__title {
+    padding-right: 20px;
+
+    a {
+    font-size: 20px;
+    }
+  }
+
+  .catalog-item__options {
+    font-size: 15px;
+  }
+
+  .catalog-item__order {
+    position: absolute;
+    bottom: 0;
+
+    width: calc(100% - 56px);
+
+    font-size: 17px;
+  }
 }

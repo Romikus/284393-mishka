@@ -5,4 +5,31 @@
   line-height: 18px;
   font-weight: bold;
   color: #000;
+
+  &:first-of-type {
+    margin-top: 27px;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+/* --------------- tablet ------------------ */
+@media #{$tablet-widths} {
+  .label-field {
+    float: left;
+    width: 126px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-top: 17px;
+    padding-bottom: 16px;
+
+    font-size: 19px;
+    line-height: 19px;
+
+    &:first-of-type {
+      margin-top: 12px;
+    }
+  }
 }
