@@ -25,25 +25,46 @@
 }
 
 .contacts__item {
-  @include clearfix();
+  display: flex;
+
   margin-bottom: 30px;
 }
 
 .contacts__item-email,
 .contacts__item-address {
-  float: left;
   width: 75px;
 
   font-weight: normal;
 }
 
 .contacts__item-email-value {
-  float: right;
   width: 183px;
+
+  text-decoration: none;
+  color: #444;
+
+  span {
+    border-bottom: 1px solid $color-green;
+  }
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:hover span {
+    border-bottom-color: #46c1ae;
+  }
+
+  &:active {
+    color: rgba(70,193,174,0.3);
+  }
+
+  &:active span {
+    border-bottom-color: rgba(70,193,174,0.1);
+  }
 }
 
 .contacts__item-address-value {
-  float: right;
   width: 163px;
   margin: 0;
   padding-right: 20px;
@@ -61,6 +82,9 @@
 }
 
 .contacts__feedback {
+  width: 226px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 39px;
 }
 
@@ -98,28 +122,25 @@
   }
 
   .contacts__items {
+    display: flex;
+
     margin-bottom: 61px;
 
     font-size: 17px;
-
-    @include clearfix();
   }
 
   .contacts__item {
-    float: left;
     width: 50%;
     margin-bottom: 0;
   }
 
   .contacts__item-email,
   .contacts__item-address {
-    float: left;
     width: 78px;
   }
 
   .contacts__item-email-value,
   .contacts__item-address-value {
-    float: left;
     width: auto;
     padding-right: 0;
   }
@@ -133,9 +154,6 @@
   }
 
   .contacts__feedback {
-    width: 226px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 55px;
   }
 }
@@ -145,16 +163,16 @@
   .contacts {
     position: relative;
 
-    width: 1150px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
     margin: 0 auto;
     margin-bottom: 105px;
-
-    @include clearfix();
   }
 
   .contacts__content {
-    float: left;
     width: 350px;
+    margin: 0;
     padding: 0;
     padding-left: 225px;
   }
@@ -177,22 +195,22 @@
   }
 
   .contacts__items {
+    flex-direction: column;
+
     margin-bottom: 0;
   }
 
   .contacts__item {
-    float: none;
     width: auto;
     margin-bottom: 30px;
   }
 
   .contacts__map {
-    float: right;
     margin-right: 50px;
 
     width: 525px;       /* для отладки */
     height: 457px;      /* для отладки */
-    overflow: hidden;   /* для отладки */
+    //overflow: hidden;   /* для отладки */
 
     img {
       width: 525px;
@@ -202,7 +220,7 @@
 
   .contacts__feedback {
     position: absolute;
-    //left: 0;
+    left: 225px;
     bottom: 0;
   }
 }

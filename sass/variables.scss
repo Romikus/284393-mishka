@@ -3,9 +3,13 @@ $body-font-height: 24px;
 $body-font-color: #444;
 $bg-color: #fff;
 $menu-font-color: #000;
+$menu-font-color-hvr: rgba($menu-font-color, 0.6);
+$menu-font-color-down: rgba($menu-font-color, 0.3);
 $title-font-color: #000;
+$font-color-light: #fff;
 
 $color-green: #62d1ba;
 
+$mobile-widths-only: "(max-width: 767px)";
 $tablet-widths: "(min-width: 768px)";
 $desktop-widths: "(min-width: 1150px)";

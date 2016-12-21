@@ -1,3 +1,10 @@
+/* --------------- tablet ------------------ */
+@media #{$tablet-widths} {
+  .user-data__content {
+    display: flex;
+  }
+}
+
 /* --------------- desktop ------------------ */
 @media #{$desktop-widths} {
   .user-data {
