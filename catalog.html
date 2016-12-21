@@ -10,27 +10,31 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="navigation">
-        <div class="navigation__top">
+      <nav class="navigation navigation--closed navigation--nojs">
+        <div class="navigation__content">
           <div class="navigation__logo-menu">
             <a class="navigation__logo" href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA"></a>
-            <button class="navigation__toggle" type="button">Открыть меню</button>
           </div>
+          <button class="navigation__toggle" type="button">Открыть меню</button>
           <ul class="navigation__main-menu">
-            <li class="navigation__main-menu-item"><a>Каталог товаров</a></li>
+            <li class="navigation__main-menu-item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="navigation__main-menu-item"><a href="form.html">Вязание на заказ</a></li>
-            <li class="navigation__main-menu-item"><a href="#">Поиск по сайту</a></li>
-            <li class="navigation__main-menu-item"><a href="#">Корзина: пока пуста</a></li>
+            <li class="navigation__main-menu-item navigation__main-menu-item--search">
+              <a href="#">Поиск по сайту<svg class="navigation__menu-icon navigation__menu-icon--search" width="18" height="18"><use xlink:href="img/icon-search.svg#Layer_1"></use></svg></a>
+            </li>
+            <li class="navigation__main-menu-item navigation__main-menu-item--basket">
+              <a href="#">Корзина: пока пуста<svg class="navigation__menu-icon navigation__menu-icon--basket" width="21" height="19"><use xlink:href="img/icon-cart.svg#Layer_1"></use></svg></a></a>
+            </li>
           </ul>
+          <div class="navigation__bottom">
+            <ul class="navigation__menu">
+              <li class="navigation__menu-item"><a href="#">Новые поступления</a></li>
+              <li class="navigation__menu-item"><a href="#">Распродажа</a></li>
+            </ul>
+            <span class="navigation__menu-delivery">Бесплатная доставка по России</span>
+          </div>
         </div>
       </nav>
-      <div class="navigation__bottom">
-        <ul class="navigation__menu">
-          <li class="navigation__menu-item"><a href="#">Новые поступления</a></li>
-          <li class="navigation__menu-item"><a href="#">Распродажа</a></li>
-        </ul>
-        <span class="navigation__menu-delivery">Бесплатная доставка</span>
-      </div>
     </header>
     <main class="page-main">
       <h1 class="page-main__title">Каталог товаров</h1>
@@ -43,7 +47,7 @@
               <span class="catalog-item__options">Рост 30 см, вес 200 г</span>
               <div class="catalog-item__order">
                 <b class="catalog-item__price">1 200 руб.</b>
-                <a class="catalog-item__basket" href="#">Купить</a>
+                <a class="catalog-item__basket" href="#">Купить<svg class="catalog-item__basket-icon" width="21" height="19"><use xlink:href="img/icon-cart.svg#Layer_1"></use></svg></a>
               </div>
             </div>
           </section>
@@ -54,7 +58,7 @@
               <span class="catalog-item__options">Диаметр 15 см, высота 10 см</span>
               <div class="catalog-item__order">
                 <b class="catalog-item__price">690 руб.</b>
-                <a class="catalog-item__basket" href="#">Купить</a>
+                <a class="catalog-item__basket" href="#">Купить<svg class="catalog-item__basket-icon" width="21" height="19"><use xlink:href="img/icon-cart.svg#Layer_1"></use></svg></a>
               </div>
             </div>
           </section>
@@ -65,7 +69,7 @@
               <span class="catalog-item__options">Диаметр 30 см, высота 30 см</span>
               <div class="catalog-item__order">
                 <b class="catalog-item__price">1 500 руб.</b>
-                <a class="catalog-item__basket" href="#">Купить</a>
+                <a class="catalog-item__basket" href="#">Купить<svg class="catalog-item__basket-icon" width="21" height="19"><use xlink:href="img/icon-cart.svg#Layer_1"></use></svg></a>
               </div>
             </div>
           </section>
@@ -78,7 +82,10 @@
               <source src="video.ogv" type="video/ogv">
               <source src="video.webm" type="video/webm">
             </video>
-            <button class="page-main__video-button" type="button">Воспроизвести</button>
+            <button class="page-main__video-button" type="button">
+              Воспроизвести
+              <svg width="102" height="78"><use xlink:href="img/icon-play.svg#Laag_1"></use></svg>
+            </button>
           </div>
           <div class="page-main__production-info">
             <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
@@ -94,25 +101,76 @@
         </div>
         <div class="page-footer__social">
           <span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
-          <a class="social-link social-link--instagram" href="http://instagram.com/">instagram</a>
-          <a class="social-link social-link--facebook" href="http://facebook.com/">facebook</a>
-          <a class="social-link social-link--twitter" href="http://twitter.com/">twitter</a>
+          <a class="social-link social-link--instagram" href="http://instagram.com/">
+            instagram<svg class="social-link__icon" width="22" height="21"><use xlink:href="img/icon-insta.svg#Layer_1"></use></svg>
+          </a>
+          <a class="social-link social-link--facebook" href="http://facebook.com/">
+            facebook<svg class="social-link__icon" width="15" height="29"><use xlink:href="img/icon-fb.svg#Layer_1"></use></svg>
+          </a>
+          <a class="social-link social-link--twitter" href="http://twitter.com/">
+            twitter<svg class="social-link__icon" width="24" height="20"><use xlink:href="img/icon-twitter.svg#Layer_1"></use></svg>
+          </a>
         </div>
-        <p class="page-footer__copyright">
-          Разработано
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy"></a>
-        </p>
+        <a class="page-footer__copyright" href="https://htmlacademy.ru">Разработано<svg class="social-link__icon" width="27" height="34"><use xlink:href="img/logo-htmlacademy.svg#Layer_1"></use></svg></a>
       </div>
     </footer>
     <div class="modal">
       <b class="modal__header">Добавить в корзину</b>
       <span class="modal__text">Выберите размер:</span>
       <div class="modal__size-select">
-        <label for="size-s"><input id="size-s" type="radio" name="size" value="S" checked>S</label>
-        <label for="size-m"><input id="size-m" type="radio" name="size" value="M">M</label>
-        <label for="size-l"><input id="size-l" type="radio" name="size" value="L">L</label>
+        <input id="size-s" type="radio" name="size" value="S" checked>
+        <label for="size-s">S</label>
+        <input id="size-m" type="radio" name="size" value="M">
+        <label for="size-m">M</label>
+        <input id="size-l" type="radio" name="size" value="L">
+        <label for="size-l">L</label>
       </div>
       <a class="modal__add-basket" href="#">Добавить</a>
     </div>
+    <div class="modal-overlay"></div>
+
+    <script>
+      var navMain = document.querySelector('.navigation');
+      var navToggle = document.querySelector('.navigation__toggle');
+
+      var basket = document.querySelector(".catalog-item__basket");
+      var windowModal = document.querySelector(".modal");
+      var layer = document.querySelector(".modal-overlay");
+
+      navMain.classList.remove('navigation--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('navigation--closed')) {
+          navMain.classList.remove('navigation--closed');
+          navMain.classList.add('navigation--opened');
+        } else {
+          navMain.classList.add('navigation--closed');
+          navMain.classList.remove('navigation--opened');
+        }
+      });
+
+      basket.addEventListener("click", function(event) {
+        event.preventDefault();
+        windowModal.classList.add("modal--show");
+        layer.classList.add("modal-overlay--show");
+      });
+
+      layer.addEventListener("click", function(event) {
+        windowModal.classList.remove("modal--show");
+        layer.classList.remove("modal-overlay--show");
+      });
+
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (windowModal.classList.contains("modal--show")) {
+            windowModal.classList.remove("modal--show");
+          }
+          if (layer.classList.contains("modal-overlay--show")) {
+            layer.classList.remove("modal-overlay--show");
+          }
+        }
+      });
+    </script>
+
   </body>
 </html>
