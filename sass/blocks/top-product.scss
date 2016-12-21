@@ -26,9 +26,22 @@
 }
 
 .top-product__table {
+  display: table;
+  width: 100%;
   margin-bottom: 28px;
 
   line-height: 20px;
+}
+
+.top-product__table-row {
+  display: table-row;
+}
+
+.top-product__table-col {
+  display: table-cell;
+  padding: 11px 0 7px 0;
+
+  border-bottom: 1px solid #ececec;
 }
 
 .top-product__image {
@@ -36,8 +49,6 @@
   width: 260px;
   height: 315px;
   margin: 0 auto;
-
-  //vertical-align: bottom;
 }
 
 .top-product__card {
@@ -68,22 +79,19 @@
   }
 
   .top-product_header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     margin-bottom: 55px;
-
-    @include clearfix();
   }
 
   .top-product__title {
-    float: left;
-    width: 80%;
     margin: 0;
-    //margin-bottom: 4px;
 
     @include title-font(43px, 50px);
   }
 
   .top-product__subtitle {
-    float: right;
     width: 69px;
     margin: 8px 0;
     padding: 0 28px;
@@ -93,14 +101,8 @@
 
   .top-product__item {
     position: relative;
-
-    @include clearfix();
-  }
-
-  .top-product__info {
-    float: left;
-    //width: 290px;
-    width: 43.4%;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .top-product p {
@@ -110,25 +112,20 @@
     line-height: 30px;
   }
 
-  .top-product__table {
-    //float: left;
-    //width: 290px;
-    //margin-right: 378px;
-  }
-
   .top-product__image {
-    float: right;
+    flex-shrink: 0;
+
     width: 333px;
     height: 404px;
+    margin: 0;
+    margin-left: 44px;
   }
 
   .top-product__card {
     position: absolute;
     bottom: 0;
-    //left: 0;
 
-    //width: 290px;
-    width: 43.4%;
+    width: calc(100% - 333px - 44px);
   }
 }
 
@@ -137,7 +134,8 @@
   .top-product__content {
     position: relative;
 
-    @include clearfix();
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .top-product_header {
@@ -145,21 +143,22 @@
     top: 0;
     z-index: 1;
 
+    width: 80%;
+    justify-content: flex-start;
+
     margin-top: 58px;
   }
 
   .top-product__title {
-    float: none;
-    width: auto;
-    margin-left: 175px;
+    //margin-left: 175px;
 
     @include title-font(53px, 57px);
   }
 
   .top-product__subtitle {
-    float: none;
-    position: absolute;
-    top: 0;
+    //position: absolute;
+    //top: 0;
+    order: -1;
 
     margin: 12px 0 11px 0;
     padding: 0 48px 0 58px;
@@ -169,12 +168,6 @@
     margin-left: 175px;
   }
 
-  .top-product__info {
-    float: left;
-    width: 290px;
-    //width: 43.4%;
-  }
-
   .top-product p {
     margin-top: 160px;
   }
@@ -182,10 +175,10 @@
   .top-product__image {
     width: 525px;
     height: 636px;
+    margin-left: 58px;
   }
 
   .top-product__card {
-    width: 290px;
+    width: calc(100% - 525px - 58px);
   }
-
 }

@@ -1,5 +1,5 @@
 .radio {
-  outline: 2px solid yellow;
+  //outline: 2px solid yellow;
 
   &:last-of-type .radio__label {
     margin-bottom: 0;
@@ -29,15 +29,29 @@
     top: 50%;
     left: 0;
 
-    width: 36px;
-    height: 36px;
+    width: 22px;
+    height: 22px;
+    padding: 7px;
 
+    background-clip: content-box;
     background-color: transparent;
     border-radius: 50%;
     border: 2px solid #444;
 
     transform: translateY(-50%);
   }
+
+  &:hover::before {
+    border-color: $color-green;
+  }
+
+  &:active::before {
+    border-color: #c7c7c7;
+  }
+}
+
+.radio__input:checked + .radio__label::before {
+  background-color: $color-green;
 }
 
 /* --------------- tablet ------------------ */
@@ -53,8 +67,7 @@
     color: #000;
 
     &::before {
-      width: 48px;
-      height: 48px;
+      padding: 13px;
     }
   }
 }

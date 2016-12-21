@@ -2,7 +2,7 @@
   margin-bottom: 38px;
   padding-bottom: 51px;
 
-  outline: 2px solid lightblue;
+  //outline: 2px solid lightblue;
 }
 
 .reviews__content {
@@ -59,15 +59,34 @@
 
   background-color: transparent;
   border: 1px solid #ececec;
+  outline: none;
+  cursor: pointer;
 
   &--prev {
-    background: transparent url("../img/icon-left-arrow.svg") no-repeat 50% 50%;
+    //background: transparent url("../img/icon-left-arrow.svg") no-repeat 50% 50%;
     border-right-width: 0;
   }
 
   &--next {
-    background: transparent url("../img/icon-right-arrow.svg") no-repeat 50% 50%;
+    //background: transparent url("../img/icon-right-arrow.svg") no-repeat 50% 50%;
   }
+}
+
+.reviews__button-icon {
+  fill: #000;
+}
+
+.reviews__button:hover .reviews__button-icon {
+  fill: rgba(0,0,0,0.6);
+}
+
+.reviews__button:active .reviews__button-icon {
+  fill: rgba(0,0,0,0.3);
+}
+
+.reviews__add-review {
+  width: 260px;
+  margin: 0 auto;
 }
 
 /* --------------- tablet ------------------ */
@@ -112,18 +131,10 @@
   }
 
   .reviews__button {
-    width: 130px;
+    width: 88px;
     height: 60px;
 
     border: 0;
-
-    &--prev {
-      width: 88px;
-    }
-
-    &--next {
-      width: 88px;
-    }
   }
 
   .reviews__add-review {
@@ -143,8 +154,8 @@
   }
 
   .reviews__content {
-    position: relative;
-
+    max-width: 1025px;
+    margin: 0 auto;
     padding: 77px 50px 94px 225px;
   }
 

@@ -7,7 +7,7 @@
   font-size: 17px;
   line-height: 21px;
   font-weight: normal;
-  color: rgba(68,68,68,0.3);
+  color: #444;
 
   background-color: transparent;
   border: 0;
@@ -18,13 +18,48 @@
   &:last-of-type {
     margin-bottom: 0;
   }
+
+  &--phone,
+  &--mail {
+    padding-right: 45px;
+  }
+
+  &::-webkit-input-placeholder {
+    color: rgba(68,68,68,0.3);
+  }
+
+  &::-moz-placeholder {
+    color: rgba(68,68,68,0.3);
+  }
+
+  &:-moz-placeholder {
+    color: rgba(68,68,68,0.3);
+  }
+
+  &:-ms-input-placeholder {
+    color: rgba(68,68,68,0.3);
+  }
+
+  &:hover,
+  &:active {
+    border-bottom-color: $color-green;
+  }
+
+  &--phone:hover + .user-phone__icon,
+  &--phone:active + .user-phone__icon {
+      fill: $color-green;
+  }
+
+  &--mail:hover + .user-email__icon,
+  &--mail:active + .user-email__icon {
+      fill: $color-green;
+  }
 }
 
 /* --------------- tablet ------------------ */
 @media #{$tablet-widths} {
   .input-field {
-    float: left;
-    width: calc(100% - 126px);
+    flex-grow: 1;
     margin-top: 12px;
     margin-bottom: 12px;
     padding-left: 18px;
@@ -39,7 +74,15 @@
 
     &--phone,
     &--mail {
-      width: 100%;
+      padding-right: 60px;
     }
+  }
+}
+
+/* --------------- desktop ------------------ */
+@media #{$desktop-widths} {
+  .input-field--phone,
+  .input-field--mail {
+    padding-right: 45px;
   }
 }

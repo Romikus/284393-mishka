@@ -1,7 +1,7 @@
 /* --------------- tablet ------------------ */
 @media #{$tablet-widths} {
-  .product-color {
-    //column-count: 2;
-    //column-gap: 0;
+  .product-color__items {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

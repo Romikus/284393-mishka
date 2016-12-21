@@ -1,8 +1,8 @@
 .order {
-  outline: 2px solid lightgreen;
+  //outline: 2px solid lightgreen;
 }
 
-.order__wrapper,
+.order__content,
 .order__footer {
   padding: 0 30px;
 }
@@ -46,11 +46,13 @@
 /* --------------- tablet ------------------ */
 @media #{$tablet-widths} {
   .order__wrapper {
-    padding: 0 50px;
-
     &--color {
       background-color: #f1f1f1;
     }
+  }
+
+  .order__content {
+    padding: 0 50px;
   }
 
   .order__item {
@@ -87,13 +89,15 @@
   }
 
   .order__footer {
+    display: flex;
+    justify-content: space-between;
     padding: 0 50px;
 
-    @include clearfix();
+    //@include clearfix();
   }
 
   .order__note {
-    float: right;
+    //float: right;
     margin: 13px 0 10px 0;
 
     font-size: 17px;
@@ -101,7 +105,8 @@
   }
 
   .order__button {
-    float: left;
+    order: -1;
+    //float: left;
     width: 230px;
     margin-top: 3px;
   }
@@ -109,13 +114,20 @@
 
 /* --------------- desktop ------------------ */
 @media #{$desktop-widths} {
+  .order__content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
   .order__item {
     margin-left: 62px;
     padding-left: 113px;
   }
 
   .order__footer {
-    margin: 0 175px;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 225px;
   }
 
   .order__note {

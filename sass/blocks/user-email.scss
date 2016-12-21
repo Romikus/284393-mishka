@@ -1,6 +1,35 @@
+.user-email__content {
+  position: relative;
+
+  display: flex;
+}
+
+.user-email__icon {
+  position: absolute;
+  top: 10px;
+  right: 4px;
+
+  width: 32px;
+  height: 32px;
+
+  fill: rgba(0,0,0,0.2);
+}
+
+/* --------------- tablet ------------------ */
+@media #{$tablet-widths} {
+  .user-email__icon {
+    top: 23px;
+    right: 22px;
+  }
+}
+
 /* --------------- desktop ------------------ */
 @media #{$desktop-widths} {
   .user-email {
     margin-right: 175px;
+  }
+
+  .user-email__icon {
+    right: 4px;
   }
 }

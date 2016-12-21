@@ -1,5 +1,9 @@
+.page-header {
+  min-width: 320px;
+}
+
 @media #{$tablet-widths} {
   .page-header {
-    border-bottom: 1px solid crimson;
+    border-bottom: 1px solid #e7e7e7;
   }
 }
