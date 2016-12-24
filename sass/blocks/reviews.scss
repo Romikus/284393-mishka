@@ -1,8 +1,10 @@
 .reviews {
-  margin-bottom: 38px;
+  position: relative;
+
+  margin-bottom: 36px;
   padding-bottom: 51px;
 
-  //outline: 2px solid lightblue;
+  @include zigzag-line(7px);
 }
 
 .reviews__content {
@@ -18,7 +20,7 @@
 
 .reviews__item {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 
   p {
     font-size: 15px;
@@ -63,12 +65,7 @@
   cursor: pointer;
 
   &--prev {
-    //background: transparent url("../img/icon-left-arrow.svg") no-repeat 50% 50%;
     border-right-width: 0;
-  }
-
-  &--next {
-    //background: transparent url("../img/icon-right-arrow.svg") no-repeat 50% 50%;
   }
 }
 
@@ -87,21 +84,33 @@
 .reviews__add-review {
   width: 260px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* --------------- tablet ------------------ */
 @media #{$tablet-widths} {
   .reviews {
-    margin-bottom: 38px;
-    padding-bottom: 130px;
+    margin-bottom: 62px;
+    padding-bottom: 84px;
+
+    &::after {
+      height: 17px;
+
+      background-size: auto 17px;
+    }
   }
 
   .reviews__content {
     position: relative;
 
-    padding: 79px 50px 45px 50px;
+    padding: 79px 50px 49px 50px;
 
-    background: lightgray;
+    background: transparent url("../img/review@1x.jpg") no-repeat 0 50%;
+
+    @media #{$retina} {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
+    }
   }
 
   .reviews__title {
@@ -119,7 +128,9 @@
   }
 
   .reviews__author-name {
-    margin-top: 56px;
+    margin-top: 58px;
+
+    font-size: 17px;
   }
 
   .reviews__navigation {
@@ -127,7 +138,7 @@
     bottom: 0;
     right: 50px;
 
-    margin-bottom: 45px;    /* = padding-bottom блока .reviews__content */
+    margin-bottom: 45px;
   }
 
   .reviews__button {
@@ -139,10 +150,11 @@
 
   .reviews__add-review {
     position: absolute;
-    top: 79px;            /* = padding-top блока .reviews__content */
+    top: 79px;
     right: 50px;
 
     width: 171px;
+    box-sizing: content-box;
   }
 }
 
@@ -151,18 +163,30 @@
   .reviews {
     margin-bottom: 71px;
     padding-bottom: 90px;
+
+    &::after {
+      height: 23px;
+
+      background-size: auto 23px;
+    }
   }
 
   .reviews__content {
     max-width: 1025px;
     margin: 0 auto;
-    padding: 77px 50px 94px 225px;
+    padding: 70px 50px 98px 225px;
+
+    background-position: 50px 50%;
   }
 
   .reviews__title {
-    margin-bottom: 44px;
+    margin-bottom: 48px;
 
     @include title-font(53px, 57px);
+  }
+
+  .reviews__item p {
+    padding-right: 100px;
   }
 
   .reviews__author-name {
@@ -170,10 +194,6 @@
   }
 
   .reviews__navigation {
-    margin-bottom: 94px;    /* = padding-bottom блока .reviews__content */
-  }
-
-  .reviews__add-review {
-    top: 77px;              /* = padding-top блока .reviews__content */
+    margin-bottom: 94px;
   }
 }

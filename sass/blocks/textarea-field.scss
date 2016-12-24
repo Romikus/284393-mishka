@@ -35,8 +35,10 @@
 
 /* --------------- tablet ------------------ */
 @media #{$tablet-widths} {
-  padding: 16px;
+  .textarea-field {
+    padding: 14px;
 
-  font-size: 19px;
-  line-height: 21px;
+    font-size: 19px;
+    line-height: 21px;
+  }
 }

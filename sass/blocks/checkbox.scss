@@ -1,6 +1,4 @@
 .checkbox {
-  //outline: 2px solid yellow;
-
   &:last-of-type .checkbox__label {
     margin-bottom: 0;
   }
@@ -58,23 +56,17 @@
 /* --------------- tablet ------------------ */
 @media #{$tablet-widths} {
   .checkbox {
-    //float: left;
     width: 50%;
 
     &:last-of-type .checkbox__label {
       margin-bottom: 12px;
     }
+
+    &:nth-of-type(2n) {
+      width: calc(50% - 11px);
+      margin-left: 11px;
+    }
   }
-
-//  .checkbox:nth-of-type(2n-1) {
-//    float: left;
-//    width: 50%;
-//  }
-
-//  .checkbox:nth-of-type(2n) {
-//    float: right;
-//    width: 50%;
-//  }
 
   .checkbox__label {
     margin: 0;
@@ -101,5 +93,10 @@
 @media #{$desktop-widths} {
   .checkbox {
     width: 33.3%;
+
+    &:nth-of-type(2n) {
+      width: 33.3%;
+      margin-left: 0;
+    }
   }
 }
