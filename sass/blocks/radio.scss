@@ -1,6 +1,4 @@
 .radio {
-  //outline: 2px solid yellow;
-
   &:last-of-type .radio__label {
     margin-bottom: 0;
   }
@@ -26,19 +24,17 @@
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
 
-    width: 22px;
-    height: 22px;
-    padding: 7px;
+    width: 16px;
+    height: 16px;
+    padding: 10px;
 
     background-clip: content-box;
     background-color: transparent;
     border-radius: 50%;
     border: 2px solid #444;
-
-    transform: translateY(-50%);
   }
 
   &:hover::before {
@@ -58,7 +54,6 @@
 @media #{$tablet-widths} {
   .radio__label {
     margin: 0;
-    //margin-bottom: 24px;
     padding: 29px 15px 28px 81px;
 
     font-size: 19px;
@@ -67,7 +62,13 @@
     color: #000;
 
     &::before {
+      top: 50%;
+
+      width: 22px;
+      height: 22px;
       padding: 13px;
+
+      transform: translateY(-50%);
     }
   }
 }

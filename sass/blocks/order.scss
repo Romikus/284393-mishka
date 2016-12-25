@@ -1,7 +1,3 @@
-.order {
-  //outline: 2px solid lightgreen;
-}
-
 .order__content,
 .order__footer {
   padding: 0 30px;
@@ -27,6 +23,7 @@
 
   font-size: 17px;
   line-height: 17px;
+  font-weight: bold;
   text-transform: uppercase;
   color: $color-green;
 }
@@ -79,9 +76,8 @@
     left: 0;
 
     width: auto;
-    //padding: 0;
     margin: 0;
-    margin-top: 31px;
+    margin-top: 28px;
 
     &--mail {
       top: 0;
@@ -92,12 +88,9 @@
     display: flex;
     justify-content: space-between;
     padding: 0 50px;
-
-    //@include clearfix();
   }
 
   .order__note {
-    //float: right;
     margin: 13px 0 10px 0;
 
     font-size: 17px;
@@ -106,7 +99,6 @@
 
   .order__button {
     order: -1;
-    //float: left;
     width: 230px;
     margin-top: 3px;
   }

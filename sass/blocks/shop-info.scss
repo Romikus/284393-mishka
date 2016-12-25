@@ -1,7 +1,5 @@
 .shop-info {
-  margin-bottom: 55px;
-
-  outline: 2px solid lightgreen;
+  margin-bottom: 53px;
 }
 
 .shop-info__content {
@@ -10,7 +8,7 @@
 
 .shop-info__title {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 
   @include title-font(25px, 30px);
 }
@@ -26,7 +24,7 @@
   position: relative;
 
   margin-bottom: 30px;
-  padding-top: 52px;
+  padding-top: 54px;
 
   font-size: 17px;
   line-height: 1.2;
@@ -41,12 +39,16 @@
 
     width: 30px;
     height: 10px;
-    background: red;
+  }
+
+  &--material {
+    padding-right: 25%;
   }
 
   &--material::before {
     width: 33px;
     height: 38px;
+    margin-left: 8px;
 
     background: transparent url("../img/icon-feature-1.svg") no-repeat;
   }
@@ -69,6 +71,8 @@
   &--like::before {
     width: 34px;
     height: 28px;
+    margin-left: 7px;
+    margin-top: 4px;
 
     background: transparent url("../img/icon-feature-5.svg") no-repeat;
   }
@@ -80,6 +84,7 @@
   &--work::before {
     width: 35px;
     height: 34px;
+    margin-left: 2px;
 
     background: transparent url("../img/icon-feature-2.svg") no-repeat;
   }
@@ -87,6 +92,7 @@
   &--producer::before {
     width: 55px;
     height: 23px;
+    margin-left: -5px;
 
     background: transparent url("../img/icon-feature-4.svg") no-repeat;
   }
@@ -98,6 +104,7 @@
   &--packing::before {
     width: 33px;
     height: 32px;
+    margin-left: 2px;
 
     background: transparent url("../img/icon-feature-6.svg") no-repeat;
   }
@@ -106,7 +113,7 @@
 /* --------------- tablet ------------------ */
 @media #{$tablet-widths} {
   .shop-info {
-    margin-bottom: 50px;
+    margin-bottom: 27px;
   }
 
   .shop-info__content {
@@ -114,7 +121,7 @@
   }
 
   .shop-info__title {
-    margin-bottom: 45px;
+    margin-bottom: 47px;
 
     @include title-font(43px, 50px);
   }
@@ -125,10 +132,35 @@
   }
 
   .shop-info__subtitle {
+    margin-bottom: 53px;
+
     font-size: 20px;
 
     &--material {
-      padding-right: 20%;
+      padding-right: 35%;
+    }
+
+    &--style::before {
+      margin-top: 2px;
+    }
+
+    &--like::before {
+      margin-left: 8px;
+      margin-top: 6px;
+    }
+
+    &--work::before {
+      margin-top: 4px;
+      margin-left: 3px;
+    }
+
+    &--producer::before {
+      margin-top: 5px;
+    }
+
+    &--packing::before {
+      margin-top: 3px;
+      margin-left: 3px;
     }
   }
 }
@@ -136,7 +168,7 @@
 /* --------------- desktop ------------------ */
 @media #{$desktop-widths} {
   .shop-info {
-    margin-bottom: 55px;
+    margin-bottom: 34px;
   }
 
   .shop-info__content {
@@ -146,8 +178,18 @@
   }
 
   .shop-info__title {
-    margin-bottom: 42px;
+    margin-bottom: 48px;
 
     @include title-font(53px, 57px);
+  }
+
+  .shop-info__subtitle {
+    &--style {
+      padding-right: 28%;
+    }
+
+    &--like {
+      padding-right: 35%;
+    }
   }
 }

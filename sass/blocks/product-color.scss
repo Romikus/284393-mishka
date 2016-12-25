@@ -5,3 +5,10 @@
     flex-wrap: wrap;
   }
 }
+
+/* --------------- desktop ------------------ */
+@media #{$desktop-widths} {
+  .product-color {
+    padding-right: 87px;
+  }
+}

@@ -1,7 +1,5 @@
 .contacts {
-  margin-bottom: 39px;
-
-  outline: 2px solid lightgreen;
+  margin-bottom: 40px;
 }
 
 .contacts__content {
@@ -71,18 +69,18 @@
 }
 
 .contacts__map {
-  width: 320px;
-  margin: 0 auto;
+  width: 100%;
+  height: 457px;
 
-  img {
+  iframe {
     width: 100%;
-    height: auto;
+    height: 457px;
     vertical-align: bottom;
   }
 }
 
 .contacts__feedback {
-  width: 226px;
+  width: 256px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 39px;
@@ -102,7 +100,7 @@
   .contacts__title {
     position: relative;
 
-    margin-bottom: 47px;
+    margin-bottom: 49px;
 
     @include title-font(43px, 50px);
 
@@ -117,14 +115,14 @@
       margin-right: 3px;
 
       background: transparent url("../img/icon-flag.svg") no-repeat;
-      transform: translateY(-25%);
+      transform: translateY(-19%);
     }
   }
 
   .contacts__items {
     display: flex;
 
-    margin-bottom: 61px;
+    margin-bottom: 56px;
 
     font-size: 17px;
   }
@@ -145,15 +143,8 @@
     padding-right: 0;
   }
 
-  .contacts__map {
-    width: 768px;
-    img {
-      width: 768px;
-      height: 457px;
-    }
-  }
-
   .contacts__feedback {
+    width: 226px;
     margin-top: 55px;
   }
 }
@@ -171,6 +162,8 @@
   }
 
   .contacts__content {
+    flex-shrink: 0;
+
     width: 350px;
     margin: 0;
     padding: 0;
@@ -180,7 +173,7 @@
   .contacts__title {
     position: relative;
 
-    margin-top: 77px;
+    margin-top: 72px;
     margin-bottom: 47px;
 
     @include title-font(53px, 57px);
@@ -188,6 +181,7 @@
     &::after {
       left: 0;
       margin: 0;
+      margin-top: -10px;
       margin-left: -65px;
 
       transform: translateX(-100%);
@@ -195,6 +189,7 @@
   }
 
   .contacts__items {
+    flex-shrink: 0;
     flex-direction: column;
 
     margin-bottom: 0;
@@ -206,16 +201,10 @@
   }
 
   .contacts__map {
+    flex-grow: 1;
+
+    width: 525px;
     margin-right: 50px;
-
-    width: 525px;       /* для отладки */
-    height: 457px;      /* для отладки */
-    //overflow: hidden;   /* для отладки */
-
-    img {
-      width: 525px;
-      height: 457px;
-    }
   }
 
   .contacts__feedback {

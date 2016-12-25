@@ -93,7 +93,6 @@
 @media #{$tablet-widths} {
   .modal {
     width: 506px;
-    //margin: 0 auto;
     padding: 42px 30px 46px 30px;
 
     border: 1px solid #c7c7c7;
@@ -107,8 +106,6 @@
   }
 
   .modal__text {
-    //margin-bottom: 20px;
-
     font-size: 17px;
   }
 

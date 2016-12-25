@@ -12,3 +12,33 @@
     clear: both;
   }
 }
+
+@mixin zigzag-line($height-zigzag-line) {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: $height-zigzag-line;
+
+    background: transparent url("../img/bg-zigzag-line.svg") repeat-x;
+    background-size: auto $height-zigzag-line;
+  }
+}
+
+@mixin zigzag-fill($height-zigzag-fill) {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: $height-zigzag-fill;
+    margin-bottom: -($height-zigzag-fill/2);
+
+    background: transparent url("../img/bg-zigzag-fill.svg") repeat-x;
+    background-size: auto $height-zigzag-fill;
+  }
+}

@@ -13,7 +13,13 @@
       <nav class="navigation navigation--closed navigation--nojs">
         <div class="navigation__content">
           <div class="navigation__logo-menu">
-            <a class="navigation__logo" href="#"><img src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA"></a>
+            <a class="navigation__logo">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA">
+              </picture>
+            </a>
           </div>
           <button class="navigation__toggle" type="button">Открыть меню</button>
           <ul class="navigation__main-menu">
@@ -73,9 +79,15 @@
               </div>
             </div>
           </div>
-          <img class="top-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+          <div class="top-product__image">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+              <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
+            </picture>
+          </div>
           <div class="top-product__card">
-            <span class="top-product__card-price">Цена 990 руб.</span>
+            <span class="top-product__card-price">Цена: 990 руб.</span>
             <a class="top-product__card-button btn" href="#">Заказать</a>
           </div>
         </div>
@@ -127,15 +139,15 @@
         </div>
       </div>
       <div class="contacts__map">
-        <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123843!2d30.32089461592146!3d59.938796869048154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1482485509829" width="320" height="457" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
       <a class="contacts__feedback btn" href="">Напишите нам</a>
     </section>
     <footer class="page-footer">
       <div class="page-footer__content">
-        <div class="page-footer__logo">
-          <img src="img/logo-mobile.svg" width="102" height="34" alt="MISHKA">
-        </div>
+        <a class="page-footer__logo">
+          <svg width="102" height="34"><use xlink:href="img/logo-footer.svg#Layer_1"></use></svg>
+        </a>
         <div class="page-footer__social">
           <span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
           <a class="social-link social-link--instagram" href="http://instagram.com/">
@@ -151,23 +163,6 @@
         <a class="page-footer__copyright" href="https://htmlacademy.ru">Разработано<svg class="social-link__icon" width="27" height="34"><use xlink:href="img/logo-htmlacademy.svg#Layer_1"></use></svg></a>
       </div>
     </footer>
-
-    <script>
-      var navMain = document.querySelector('.navigation');
-      var navToggle = document.querySelector('.navigation__toggle');
-
-      navMain.classList.remove('navigation--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('navigation--closed')) {
-          navMain.classList.remove('navigation--closed');
-          navMain.classList.add('navigation--opened');
-        } else {
-          navMain.classList.add('navigation--closed');
-          navMain.classList.remove('navigation--opened');
-        }
-      });
-    </script>
-
+    <script src="js/script.js"></script>
   </body>
 </html>

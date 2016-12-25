@@ -1,11 +1,6 @@
-.page-main {
-  //outline: 2px solid lightgreen;
-}
-
 .page-main__title {
   margin: 0;
-  margin-bottom: 30px;
-  padding: 73px 0;
+  padding: 70px 0 76px 0;
 
   text-align: center;
   @include title-font(27px, 30px);
@@ -20,6 +15,7 @@
 .page-main__catalog {
   width: 260px;
   margin: 0 auto;
+  margin-top: 30px;
 }
 
 .page-main__production {
@@ -29,10 +25,6 @@
   width: 260px;
   margin: 0 auto;
   margin-bottom: 58px;
-
-  //border: 3px solid black;
-
-  //outline: 2px solid red;
 
   p {
     margin: 0;
@@ -68,7 +60,7 @@
 
     background: transparent url("../img/icon-video.svg") no-repeat;
 
-    transform: translateY(-50%);
+    transform: translateY(-55%);
   }
 }
 
@@ -77,6 +69,13 @@
 
   width: 260px;
   height: 150px;
+
+  background: transparent url("../img/video-mobile@1x.jpg") no-repeat;
+
+  @media #{$retina} {
+    background-image: url("../img/video-mobile@2x.jpg");
+    background-size: cover;
+  }
 
   video {
     width: 260px;
@@ -94,7 +93,7 @@
   width: 102px;
   height: 78px;
   margin: 0;
-  margin-top: 6px;
+  margin-top: 4px;
   padding: 0;
 
   font-size: 0;
@@ -119,7 +118,7 @@
 }
 
 .page-main__production-info {
-  padding: 30px 33px 32px 33px;
+  padding: 27px 33px 32px 33px;
 
   border: 1px solid #ececec;
   border-top: 0;
@@ -138,22 +137,27 @@
 }
 
 .page-main__text-info {
+  margin-top: 23px;
+  margin-bottom: 10px;
+
   font-size: 13px;
 }
 
 .page-main__order {
-  margin-top: 26px;
+  margin-top: 23px;
   margin-bottom: 55px;
 }
 
 /* --------------- tablet ------------------ */
 @media #{$tablet-widths} {
   .page-main__title {
-    //margin-top: -62px;
-    //margin-bottom: 80px;
-    padding: 87px 0;
+    position: relative;
+
+    margin-bottom: 30px;
+    padding: 95px 0 79px 0;
 
     @include title-font(43px, 50px);
+    @include zigzag-fill(24px);
   }
 
   .page-main__content {
@@ -184,12 +188,13 @@
 
   .page-main__production-title {
     order: 2;
-    padding: 40px 20px 32px 108px;
+    padding: 38px 20px 32px 108px;
 
     font-size: 20px;
 
     &:before {
       left: 41px;
+      margin-top: 3px;
     }
   }
 
@@ -199,7 +204,12 @@
     width: 668px;
     height: 455px;
 
-    background-color: gray;   // для отладки
+    background: transparent url("../img/video-tablet@1x.jpg") no-repeat;
+
+    @media #{$retina} {
+      background-image: url("../img/video-tablet@2x.jpg");
+      background-size: cover;
+    }
 
     video {
       width: 668px;
@@ -210,19 +220,16 @@
   .page-main__production-info {
     order: 3;
 
-    //padding: 96px 41px 45px 41px;
     padding: 0 41px 45px 41px;
-
-    //border: 1px solid #ececec;
   }
 
   .page-main__production-order {
-    margin-top: 33px;
+    margin-top: 34px;
   }
 
   .page-main__text-info {
     margin-top: 73px;
-    margin-bottom: 6px;
+    margin-bottom: 7px;
 
     font-size: 17px;
     line-height: 30px;
@@ -237,8 +244,14 @@
 /* --------------- desktop ------------------ */
 @media #{$desktop-widths} {
   .page-main__title {
-    //margin-bottom: 128px;
     padding: 93px 0 104px 0;
+
+    &::after {
+      height: 34px;
+      margin-bottom: -17px;
+
+      background-size: auto 34px;
+    }
 
     @include title-font(53px, 57px);
   }
@@ -251,8 +264,6 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    //width: 1050px;
-    //margin: 0 auto;
     margin-top: 128px;
     margin-bottom: 0;
   }
@@ -273,13 +284,14 @@
 
   .page-main__production-title {
     width: 230px;
-    padding: 98px 57px 33px 80px;
+    padding: 95px 57px 33px 80px;
 
     border-left: 0;
 
     &:before {
       left: 80px;
-      top: 46px;
+      top: 42px;
+      margin-top: 0;
 
       transform: none;
     }
@@ -289,10 +301,22 @@
     width: 682px;
     height: 455px;
 
+    background: transparent url("../img/video-desktop@1x.jpg") no-repeat;
+
+    @media #{$retina} {
+      background-image: url("../img/video-desktop@2x.jpg");
+      background-size: cover;
+    }
+
     video {
       width: 682px;
       height: 455px;
     }
+  }
+
+  .page-main__video-button {
+    margin-top: 0;
+    margin-left: 9px;
   }
 
   .page-main__production-info {
@@ -304,11 +328,16 @@
   }
 
   .page-main__production-order {
-    margin-top: 44px;
+    margin-top: 46px;
   }
 
   .page-main__text-info {
     padding: 0 175px;
-    margin-top: 125px;
+    margin-top: 122px;
+    margin-bottom: 5px;
+  }
+
+  .page-main__order {
+    margin-top: 5px;
   }
 }
