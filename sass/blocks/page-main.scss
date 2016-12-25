@@ -70,13 +70,6 @@
   width: 260px;
   height: 150px;
 
-  background: transparent url("../img/video-mobile@1x.jpg") no-repeat;
-
-  @media #{$retina} {
-    background-image: url("../img/video-mobile@2x.jpg");
-    background-size: cover;
-  }
-
   video {
     width: 260px;
     height: 150px;
@@ -146,6 +139,17 @@
 .page-main__order {
   margin-top: 23px;
   margin-bottom: 55px;
+}
+
+@media #{$mobile-widths-only} {
+  .page-main__production-video {
+    background: transparent url("../img/video-mobile@1x.jpg") no-repeat;
+
+    @media #{$retina} {
+      background-image: url("../img/video-mobile@2x.jpg");
+      background-size: cover;
+    }
+  }
 }
 
 /* --------------- tablet ------------------ */
