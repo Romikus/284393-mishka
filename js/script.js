@@ -25,10 +25,12 @@ if(basket) {
   });
 }
 
-layer.addEventListener("click", function(event) {
-  windowModal.classList.remove("modal--show");
-  layer.classList.remove("modal-overlay--show");
-});
+if(layer) {
+  layer.addEventListener("click", function(event) {
+    windowModal.classList.remove("modal--show");
+    layer.classList.remove("modal-overlay--show");
+  });
+}
 
 window.addEventListener("keydown", function(event) {
   if (event.keyCode === 27) {
