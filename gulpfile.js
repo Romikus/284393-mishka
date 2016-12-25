@@ -28,16 +28,16 @@ gulp.task("style", function() {
         sort: true
       })
     ]))
-    .pipe(gulp.dest("css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
-gulp.task("serve", ["style"], function() {
+gulp.task("serve", function() {
   server.init({
-    server: ".",
+    server: "build",
     notify: false,
     open: true,
     cors: true,
@@ -58,17 +58,17 @@ gulp.task("images", function() {
 });
 
 gulp.task("symbols", function() {
-  return gulp.src("img/icons/*.svg")
+  return gulp.src("build/img/icons/*.svg")
     .pipe(svgmin())
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("symbols.svg"))
-    .pipe(gulp.dest("img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("build", function(fn) {
-  run("style", "images", "symbols", fn);
+  run("clean", "copy", "style", "images", "symbols", fn);
 });
 
 gulp.task("copy", function() {
