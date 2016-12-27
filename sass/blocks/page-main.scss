@@ -181,7 +181,7 @@
   .page-main__catalog {
     width: 100%;
     margin-top: 80px;
-    margin-bottom: 54px;
+    margin-bottom: 0;
 
     overflow: hidden;
   }
@@ -202,7 +202,7 @@
 
   .page-main__production-title {
     order: 2;
-    padding: 38px 20px 32px 108px;
+    padding: 38px 20px 32px 106px;
 
     font-size: 20px;
 
@@ -312,7 +312,7 @@
 
   .page-main__production-title {
     width: 230px;
-    padding: 95px 57px 33px 80px;
+    padding: 95px 59px 33px 78px;
 
     border-left: 0;
 
@@ -367,5 +367,6 @@
 
   .page-main__order {
     margin-top: 5px;
+    margin-bottom: 49px;
   }
 }

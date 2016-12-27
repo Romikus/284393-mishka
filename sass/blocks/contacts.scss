@@ -115,6 +115,7 @@
     position: relative;
 
     margin-bottom: 49px;
+    margin-left: -4px;
 
     @include title-font(43px, 50px);
 
@@ -170,6 +171,9 @@
   .contacts__feedback {
     width: 226px;
     margin-top: 55px;
+
+    font-size: 17px;
+    line-height: 17px;
   }
 }
 
@@ -245,7 +249,5 @@
     position: absolute;
     left: 225px;
     bottom: 0;
-
-    font-size: 17px;
   }
 }

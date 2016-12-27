@@ -114,6 +114,7 @@
   }
 
   .reviews__title {
+    margin-left: -4px;
     margin-bottom: 47px;
 
     @include title-font(43px, 50px);

@@ -110,6 +110,7 @@
 
   .top-product__title {
     margin: 0;
+    margin-left: -3px;
 
     @include title-font(43px, 50px);
   }
@@ -212,6 +213,7 @@
   }
 
   .top-product__title {
+    margin-left: 0;
     @include title-font(53px, 57px);
   }
 

@@ -130,8 +130,6 @@
   }
 
   .shop-info__subtitles {
-    //column-count: 2;
-    //column-gap: 0;
     display: flex;
     flex-wrap: wrap;
   }
@@ -146,7 +144,6 @@
     &--material {
       order: -6;
       width: 33%;
-      //padding-right: 35%;
       padding-right: 17%;
     }
 
