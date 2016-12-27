@@ -115,13 +115,21 @@
 
   border: 1px solid #ececec;
   border-top: 0;
+}
 
-  &:hover {
-    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.1);
+.page-main__production:hover {
+  .page-main__production-info {
+    box-shadow: 0 11px 10px -5px rgba(0,0,0,0.1),
+                5px 0 10px -5px rgba(0,0,0,0.1),
+                -5px 0 10px -5px rgba(0,0,0,0.1);
   }
+}
 
-  &:active {
-    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.1);
+.page-main__production:active {
+  .page-main__production-info {
+    box-shadow: 0 6px 5px -3px rgba(0,0,0,0.1),
+                3px 0 5px -3px rgba(0,0,0,0.1),
+                -3px 0 5px -3px rgba(0,0,0,0.1);
   }
 }
 
@@ -171,7 +179,8 @@
   }
 
   .page-main__catalog {
-    width: auto;
+    //width: auto;
+    width: 100%;
     margin-top: 80px;
     margin-bottom: 54px;
   }
@@ -199,6 +208,20 @@
     &:before {
       left: 41px;
       margin-top: 3px;
+    }
+  }
+
+  .page-main__production:hover {
+    .page-main__production-title {
+      box-shadow: 6px 0 10px -6px rgba(0,0,0,0.1),
+                  -6px 0 10px -6px rgba(0,0,0,0.1);
+    }
+  }
+
+  .page-main__production:active {
+    .page-main__production-title {
+      box-shadow: 3px 0 5px -3px rgba(0,0,0,0.1),
+                  -3px 0 5px -3px rgba(0,0,0,0.1);
     }
   }
 

@@ -13,7 +13,7 @@
 
 .reviews__title {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 
   @include title-font(25px, 30px);
 }
@@ -181,6 +181,7 @@
 
   .reviews__title {
     margin-bottom: 48px;
+    margin-left: -3px;
 
     @include title-font(53px, 57px);
   }

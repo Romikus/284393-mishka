@@ -120,6 +120,7 @@
   .products__items {
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
     padding: 0 50px;
   }
 
@@ -134,6 +135,7 @@
   }
 
   .products__item-title {
+    margin-right: 100px;
     padding: 28px 0 30px 37px;
 
     font-size: 20px;

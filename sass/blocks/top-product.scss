@@ -128,6 +128,10 @@
     justify-content: flex-start;
   }
 
+  .top-product__info {
+    padding-bottom: 111px;
+  }
+
   .top-product p {
     margin-top: 0;
 
@@ -222,8 +226,12 @@
     margin-left: 175px;
   }
 
+  .top-product__info {
+    padding-top: 158px;
+  }
+
   .top-product p {
-    margin-top: 158px;
+    //margin-top: 158px;
   }
 
   .top-product__table {
@@ -248,5 +256,13 @@
 
   .top-product__card {
     width: calc(100% - 525px - 58px);
+  }
+
+  .top-product__card-price {
+    margin-left: 5px;
+  }
+
+  .top-product__card-button {
+    margin-top: 33px;
   }
 }

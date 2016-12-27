@@ -26,6 +26,10 @@
   font-weight: bold;
   text-transform: uppercase;
   color: $color-green;
+
+  &--mail {
+    width: 81px;
+  }
 }
 
 .order__note {

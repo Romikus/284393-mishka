@@ -1,5 +1,5 @@
 .shop-info {
-  margin-bottom: 53px;
+  margin-bottom: 54px;
 }
 
 .shop-info__content {
@@ -23,7 +23,7 @@
 .shop-info__subtitle {
   position: relative;
 
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   padding-top: 54px;
 
   font-size: 17px;
@@ -84,6 +84,7 @@
   &--work::before {
     width: 35px;
     height: 34px;
+    margin-top: 2px;
     margin-left: 2px;
 
     background: transparent url("../img/icon-feature-2.svg") no-repeat;
@@ -92,6 +93,7 @@
   &--producer::before {
     width: 55px;
     height: 23px;
+    margin-top: 3px;
     margin-left: -5px;
 
     background: transparent url("../img/icon-feature-4.svg") no-repeat;
@@ -122,26 +124,46 @@
 
   .shop-info__title {
     margin-bottom: 47px;
+    margin-left: -4px;
 
     @include title-font(43px, 50px);
   }
 
   .shop-info__subtitles {
-    column-count: 2;
-    column-gap: 0;
+    //column-count: 2;
+    //column-gap: 0;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .shop-info__subtitle {
+    width: 50%;
     margin-bottom: 53px;
+    padding-right: 0;
 
     font-size: 20px;
 
     &--material {
-      padding-right: 35%;
+      order: -6;
+      width: 33%;
+      //padding-right: 35%;
+      padding-right: 17%;
+    }
+
+    &--style {
+      order: -4;
+      width: 38%;
+      padding-right: 12%;
     }
 
     &--style::before {
       margin-top: 2px;
+    }
+
+    &--like {
+      order: -2;
+      width: 35%;
+      padding-right: 15%;
     }
 
     &--like::before {
@@ -149,13 +171,30 @@
       margin-top: 6px;
     }
 
+    &--work {
+      order: -5;
+      width: 40%;
+      padding-right: 10%;
+    }
+
     &--work::before {
       margin-top: 4px;
       margin-left: 3px;
     }
 
+    &--producer {
+      order: -3;
+      width: 50%;
+    }
+
     &--producer::before {
       margin-top: 5px;
+    }
+
+    &--packing {
+      order: -1;
+      width: 40%;
+      padding-right: 10%;
     }
 
     &--packing::before {
@@ -185,11 +224,13 @@
 
   .shop-info__subtitle {
     &--style {
-      padding-right: 28%;
+      width: 35%;
+      padding-right: 15%;
     }
 
     &--like {
-      padding-right: 35%;
+      width: 32%;
+      padding-right: 18%;
     }
   }
 }

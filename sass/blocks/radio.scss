@@ -1,6 +1,10 @@
 .radio {
+  &:first-of-type .radio__label {
+    margin-top: 18px;
+  }
+
   &:last-of-type .radio__label {
-    margin-bottom: 0;
+    //margin-bottom: 0;
   }
 }
 
@@ -12,9 +16,10 @@
   position: relative;
 
   display: block;
-  margin-top: 17px;
-  margin-bottom: 20px;
-  padding: 11px 15px 11px 63px;
+  margin-top: 3px;
+  //margin-bottom: 20px;
+  margin-bottom: 0;
+  padding: 10px 15px 11px 63px;
 
   font-size: 17px;
   line-height: 18px;
@@ -52,6 +57,12 @@
 
 /* --------------- tablet ------------------ */
 @media #{$tablet-widths} {
+  .radio {
+    &:first-of-type .radio__label {
+      margin-top: 0;
+    }
+  }
+
   .radio__label {
     margin: 0;
     padding: 29px 15px 28px 81px;

@@ -28,16 +28,16 @@ gulp.task("style", function() {
         sort: true
       })
     ]))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("css"))
     .pipe(server.stream());
 });
 
-gulp.task("serve", function() {
+gulp.task("serve", ["style"], function() {
   server.init({
-    server: "build",
+    server: ".",
     notify: false,
     open: true,
     cors: true,
