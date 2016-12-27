@@ -1,3 +1,7 @@
+.user-data__content {
+  display: block;
+}
+
 /* --------------- tablet ------------------ */
 @media #{$tablet-widths} {
   .user-data__content {

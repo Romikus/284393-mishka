@@ -179,10 +179,11 @@
   }
 
   .page-main__catalog {
-    //width: auto;
     width: 100%;
     margin-top: 80px;
     margin-bottom: 54px;
+
+    overflow: hidden;
   }
 
   .page-main__production {

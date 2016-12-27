@@ -66,6 +66,8 @@
 
   list-style: none;
   text-align: left;
+
+  overflow: hidden;
 }
 
 .navigation__main-menu-item {
@@ -201,6 +203,7 @@
   .navigation__main-menu {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
   }
 
   .navigation__main-menu-item {
@@ -308,6 +311,7 @@
 
   .navigation__main-menu {
     justify-content: flex-start;
+    flex-wrap: wrap;
     width: 100%;
   }
 
@@ -341,7 +345,8 @@
     }
 
     &:nth-child(3) {
-      margin-left: 150px;
+      margin-left: 0;
+      padding-left: 250px;
     }
 
     &--basket a {

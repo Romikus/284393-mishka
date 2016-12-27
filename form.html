@@ -53,7 +53,7 @@
         <div class="order__wrapper">
           <div class="order__content">
             <fieldset class="order__item product-type">
-              <legend class="order__title product-type__title">Тип</legend>
+              <legend class="order__title product-type__title fieldset-title">Тип</legend>
               <div class="product-type__item radio">
                 <input id="radio-1" class="radio__input" type="radio" name="product-type" value="Аксессуар для интерьера" checked>
                 <label for="radio-1" class="radio__label">Аксессуар для интерьера</label>
@@ -68,7 +68,7 @@
         <div class="order__wrapper order__wrapper--color">
           <div class="order__content">
             <fieldset class="order__item product-color">
-              <legend class="order__title product-color__title">Цвет</legend>
+              <legend class="order__title product-color__title fieldset-title">Цвет</legend>
               <div class="product-color__items">
                 <div class="product-color__item checkbox">
                   <input id="checkbox-1" class="checkbox__input" type="checkbox" name="product-color[]" value="Белый" checked>
@@ -101,7 +101,7 @@
         <div class="order__wrapper">
           <div class="order__content">
             <fieldset class="order__item user-data">
-              <legend class="order__title user-data__title">ФИО</legend>
+              <legend class="order__title user-data__title fieldset-title">ФИО</legend>
               <div class="user-data__content">
                 <label for="user-name" class="user-data__label label-field">Имя:</label>
                 <input id="user-name" class="user-data__input input-field" type="text" name="user-name" placeholder="Введите ваше имя*" required>
@@ -120,10 +120,10 @@
         <div class="order__wrapper order__wrapper--color">
           <div class="order__content">
             <fieldset class="order__item order__item--phone user-phone">
-              <legend class="order__title order__title--phone user-phone__title">Тел</legend>
+              <legend class="order__title order__title--phone order__title--hidden user-phone__title">Тел</legend>
               <div class="user-phone__content">
-                <label for="user-phone" class="user-phone__label label-field label-field--hidden">Телефон:</label>
-                <input id="user-phone" class="user-phone__input input-field input-field--phone" type="tel" name="user-phone" placeholder="+7 XXX XX XX*" pattern="^[0-9]+$" required>
+                <label for="user-phone" class="user-phone__label fieldset-title fieldset-title--phone">Тел</label>
+                <input id="user-phone" class="user-phone__input input-field input-field--phone" type="tel" name="user-phone" placeholder="+7 XXX XX XX*" pattern="^[0-9]+$" required style="display: block">
                 <svg class="user-phone__icon" width="25" height="25"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use></svg>
               </div>
             </fieldset>
@@ -132,9 +132,9 @@
         <div class="order__wrapper order__wrapper--color">
           <div class="order__content">
             <fieldset class="order__item order__item--mail user-email">
-              <legend class="order__title order__title--mail user-email__title">E-mail</legend>
+              <legend class="order__title order__title--mail order__title--hidden user-email__title">E-mail</legend>
               <div class="user-email__content">
-                <label for="user-email" class="user-email__label label-field label-field--hidden">E-mail:</label>
+                <label for="user-email" class="user-email__label fieldset-title fieldset-title--mail">E-mail</label>
                 <input id="user-email" class="user-email__input input-field input-field--mail" type="email" name="user-email" placeholder="Ваш Email*" required>
                 <svg class="user-email__icon" width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-mail"></use></svg>
               </div>
@@ -144,7 +144,7 @@
         <div class="order__wrapper">
           <div class="order__content">
             <fieldset class="order__item user-note">
-              <legend class="order__title user-note__title">Доп</legend>
+              <label for="user-text" class="order__title fieldset-title fieldset-title--note user-note__title">Доп</label>
               <textarea id="user-text" class="user-note__textarea textarea-field" name="user-text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </fieldset>
           </div>

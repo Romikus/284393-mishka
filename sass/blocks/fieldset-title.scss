@@ -1,0 +1,53 @@
+.fieldset-title {
+  position: relative;
+
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 6px;
+
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $color-green;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 2;
+
+    width: calc(100% - 62px);
+    height: 1px;
+    margin-top: -1px;
+
+    background-color: $color-green;
+  }
+
+  &--mail::after {
+    width: calc(100% - 81px);
+  }
+}
+
+/* --------------- tablet ------------------ */
+@media #{$tablet-widths} {
+  .fieldset-title {
+    position: absolute;
+    top: 38px;
+    left: 0;
+
+    width: auto;
+    margin: 0;
+    margin-top: 28px;
+
+    &--mail {
+      top: 0;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}

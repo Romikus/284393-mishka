@@ -3,6 +3,7 @@
   width: 100%;
   margin-bottom: 24px;
   padding: 14px 0;
+  //box-sizing: border-box;
 
   font-size: 17px;
   line-height: 21px;
@@ -23,6 +24,7 @@
   &--phone,
   &--mail {
     padding-right: 45px;
+    box-sizing: border-box;
   }
 
   &::-webkit-input-placeholder {

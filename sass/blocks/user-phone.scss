@@ -1,12 +1,12 @@
 .user-phone__content {
-  position: relative;
+  //position: relative;
 
-  display: flex;
+  //display: flex;
 }
 
 .user-phone__icon {
   position: absolute;
-  top: 12px;
+  bottom: 12px;
   right: 8px;
 
   width: 25px;
@@ -18,7 +18,7 @@
 /* --------------- tablet ------------------ */
 @media #{$tablet-widths} {
   .user-phone__icon {
-    top: 25px;
+    bottom: 27px;
     right: 26px;
   }
 }
@@ -30,6 +30,7 @@
   }
 
   .user-phone__icon {
+    bottom: 27px;
     right: 8px;
   }
 }
