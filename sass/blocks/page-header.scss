@@ -1,5 +1,6 @@
 .page-header {
   min-width: 320px;
+  overflow: hidden;
 }
 
 @media #{$tablet-widths} {
